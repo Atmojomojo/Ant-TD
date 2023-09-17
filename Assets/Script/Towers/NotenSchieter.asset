@@ -18,3 +18,4 @@ MonoBehaviour:
   hasCooldown: 0
   cooldownTime: 0
   specialEffect: 
+  cost: 100

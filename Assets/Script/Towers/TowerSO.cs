@@ -10,4 +10,5 @@ public class TowerSO : ScriptableObject
     public bool hasCooldown;
     public float cooldownTime;
     public string specialEffect;
+    public int cost;
 }

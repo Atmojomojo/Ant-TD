@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+
+public class Currency : MonoBehaviour
+{
+    public int currency;
+    public TMP_Text text;
+    // Start is called before the first frame update
+    void Start()
+    {
+        currency = 500;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        text.SetText(currency.ToString());
+    }
+}
