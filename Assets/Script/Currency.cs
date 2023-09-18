@@ -5,7 +5,8 @@ using TMPro;
 
 public class Currency : MonoBehaviour
 {
-    public int currency;
+    public float currency;
+    public float interest1, interest2, interest3, interest4, interest5;
     public TMP_Text text;
     // Start is called before the first frame update
     void Start()
