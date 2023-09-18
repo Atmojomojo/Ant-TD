@@ -1,8 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class TowerPlacement : MonoBehaviour
+public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     public Vector3 positionOffset;
     public Currency currency;
@@ -23,27 +25,32 @@ public class TowerPlacement : MonoBehaviour
         currency = FindObjectOfType<Currency>();
     }
 
-    void OnMouseEnter()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         rend.material.color = hoverColor;
     }
 
-    void OnMouseDown()
+    public void OnPointerDown(PointerEventData eventData)
     {
-        if (turret == false)
+        if (eventData.button == PointerEventData.InputButton.Left)
         {
-            if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
+            if (turret == false)
             {
-                Instantiate(current, transform.position + positionOffset, transform.rotation);
-                turret = true;
-                currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
+                if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
+                {
+                    Instantiate(current, transform.position + positionOffset, transform.rotation);
+                    turret = true;
+                    currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
+                }
             }
         }
     }
-    void OnMouseExit()
+   
+    public void OnPointerExit(PointerEventData eventData)
     {
         rend.material.color = startColor;
     }
+   
     // Update is called once per frame
     void Update()
     {
