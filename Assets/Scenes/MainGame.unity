@@ -4384,10 +4384,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5574d07448fe4e6479fccdef0287d93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 11400000, guid: 6e690aab2a1ada24687640ed1cf3f231, type: 2}
+  wave: {fileID: 11400000, guid: 5aa82625f1a8a304289c2c9f11cfb9cf, type: 2}
   numberSend: 0
   timeStamp: 0
   currentWave: 0
+  infinite: 1
 --- !u!4 &455160997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -6879,10 +6880,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5574d07448fe4e6479fccdef0287d93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wave: {fileID: 11400000, guid: c74328854a220f841a4dd6cc9c22f338, type: 2}
+  wave: {fileID: 11400000, guid: 9fd6dceb03f93124091bf75e15ad5486, type: 2}
   numberSend: 0
   timeStamp: 0
   currentWave: 0
+  infinite: 1
 --- !u!1001 &755728864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17420,6 +17422,7 @@ MonoBehaviour:
   numberSend: 0
   timeStamp: 0
   currentWave: 0
+  infinite: 1
 --- !u!1001 &2063076672
 PrefabInstance:
   m_ObjectHideFlags: 0

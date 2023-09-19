@@ -9,7 +9,7 @@ public class EnemySpawn : MonoBehaviour
     public int numberSend; 
     public float timeStamp;
     public int currentWave;
-
+    public bool infinite = false;
     // Update is called once per frame
     void Update()
     {
@@ -27,6 +27,20 @@ public class EnemySpawn : MonoBehaviour
             timeStamp = Time.time + wave.enemyType[currentWave].intervalTilNextEnemyType;
             currentWave += 1;
             numberSend = 0;
+        }
+        if (infinite == true)
+        {
+            if (wave.enemyType.Length == currentWave)
+            {
+                currentWave = 0;
+            }
+        }
+        else
+        {
+            if (wave.enemyType.Length == currentWave)
+            {
+                //
+            }
         }
     }
 }
