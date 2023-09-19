@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 90b2f94f2427c4641bf497910b12fb8d, type: 3}
-  m_Name: Wave
+  m_Name: Wave Links
   m_EditorClassIdentifier: 
   enemyType:
-  - enemy: {fileID: 5376382017922165083, guid: ac055ade05515664a95c28194d98e54b, type: 3}
-    numberOfType: 4
-    interval: 0.5
-    intervalTilNextEnemyType: 4
   - enemy: {fileID: 5376382017922165083, guid: 0e98762867ef2a14e9cfb741a79055b7, type: 3}
     numberOfType: 2
     interval: 1
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 5376382017922165083, guid: ac055ade05515664a95c28194d98e54b, type: 3}
+    numberOfType: 4
+    interval: 0.5
     intervalTilNextEnemyType: 4
   - enemy: {fileID: 5376382017922165083, guid: ac055ade05515664a95c28194d98e54b, type: 3}
     numberOfType: 4
