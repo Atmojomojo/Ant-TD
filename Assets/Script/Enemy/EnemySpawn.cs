@@ -17,7 +17,7 @@ public class EnemySpawn : MonoBehaviour
         {
             if (Time.time > timeStamp)
             {
-                Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, Quaternion.identity);
+                Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, gameObject.transform.rotation);
                 numberSend += 1;
                 timeStamp = Time.time + wave.enemyType[currentWave].interval;
             }
