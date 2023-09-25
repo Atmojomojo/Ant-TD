@@ -1,0 +1,34 @@
+{
+    "name": "InputPlayer",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "6ad93d25-9591-46b9-825e-a0b0f9636650",
+            "actions": [
+                {
+                    "name": "CloseUI",
+                    "type": "Button",
+                    "id": "86df51bb-18a1-46d7-b3cd-9143eb2d8a87",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b3d938f8-df1d-4570-90bc-7abf0f6a4f65",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CloseUI",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

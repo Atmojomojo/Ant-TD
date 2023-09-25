@@ -7,6 +7,7 @@ public class UIClose : MonoBehaviour
 {
     public GameObject turretUI;
     private InputAction action;
+
     public void OnCloseUI()
     {
         turretUI.SetActive(false);

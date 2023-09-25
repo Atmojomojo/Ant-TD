@@ -21,7 +21,7 @@ MonoBehaviour:
     numberOfType: 4
     interval: 1
     intervalTilNextEnemyType: 4
-  - enemy: {fileID: 5376382017922165083, guid: 0e98762867ef2a14e9cfb741a79055b7, type: 3}
+  - enemy: {fileID: 6991931726067003526, guid: fc231efeadbabd64a93c47ffda2b86d1, type: 3}
     numberOfType: 2
     interval: 2
     intervalTilNextEnemyType: 4

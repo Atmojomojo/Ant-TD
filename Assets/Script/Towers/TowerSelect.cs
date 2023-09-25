@@ -10,8 +10,6 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     // Start is called before the first frame update
     void Start()
     {
-        turretUI = GameObject.Find("TurretUI");
-        turretUI.SetActive(false);
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -35,9 +33,6 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     // Update is called once per frame
     void Update()
     {
-       if (turretUI == null)
-        {
-            turretUI = GameObject.Find("TurretUI");
-        }
+       
     }
 }
