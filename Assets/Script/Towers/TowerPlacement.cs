@@ -14,20 +14,19 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 
     private bool turret;
 
-    private Renderer rend;
+    public GameObject rend;
     private Color startColor;
     // Start is called before the first frame update
     void Start()
     {
         SelectNut();
-        rend = GetComponent<Renderer>();
-        startColor = rend.material.color;
+        startColor = rend.GetComponent<Renderer>().material.color;
         currency = FindObjectOfType<Currency>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        rend.material.color = hoverColor;
+        rend.GetComponent<Renderer>().material.color = hoverColor;
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -48,7 +47,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
    
     public void OnPointerExit(PointerEventData eventData)
     {
-        rend.material.color = startColor;
+        rend.GetComponent<Renderer>().material.color = startColor;
     }
    
     // Update is called once per frame
