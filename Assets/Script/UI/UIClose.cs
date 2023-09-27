@@ -5,12 +5,12 @@ using UnityEngine.InputSystem;
 
 public class UIClose : MonoBehaviour
 {
-    public GameObject turretUI;
+    public GameObject turretCanvas;
     private InputAction action;
-
+  
     public void OnCloseUI()
     {
-        turretUI.SetActive(false);
+        turretCanvas.GetComponent<Canvas>().enabled = false;
     }
     private void OnEnable()
     {

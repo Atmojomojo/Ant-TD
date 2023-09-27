@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: 3178404556365033515}
   m_Layer: 0
   m_Name: Buildable
-  m_TagString: Untagged
+  m_TagString: Buildable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,9 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ef822ac78b55a489bdef9389a9c4e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prefab: []
   positionOffset: {x: 0, y: 1.25, z: 0}
   currency: {fileID: 0}
   hoverColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
+  turretCanvas: {fileID: 0}
   nut: {fileID: 7086186925053549443, guid: 52268c580b30b604f87e9839fbfab649, type: 3}
   berry: {fileID: 0}
   fire: {fileID: 0}

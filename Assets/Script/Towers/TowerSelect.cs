@@ -5,34 +5,34 @@ using UnityEngine.EventSystems;
 
 public class TowerSelect : MonoBehaviour, IPointerDownHandler
 {
-    public bool selected = false;
+    public UpgradeTower upgradeTower;
     public GameObject turretUI;
+    public GameObject turretCanvas;
     // Start is called before the first frame update
     void Start()
     {
+        upgradeTower = FindAnyObjectByType<UpgradeTower>();
     }
     public void OnPointerDown(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
-            selected = true;
+            upgradeTower.selectedTower = gameObject;
             turretUI.transform.position = transform.position;
-            turretUI.SetActive(true);
+            turretCanvas.GetComponent<Canvas>().enabled = true;
         }
     }
 
-    public void Upgrade()
-    {
-
-    }
-
-    public void Sell()
-    {
-
-    }
     // Update is called once per frame
     void Update()
     {
-       
+       if (turretUI == null)
+        {
+            turretUI = GameObject.Find("TurretUI");
+        }
+       if (turretCanvas == null)
+        {
+            turretCanvas = GameObject.Find("TurretCanvas");
+        }
     }
 }
