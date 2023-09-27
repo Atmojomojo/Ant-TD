@@ -8,13 +8,13 @@ public class LoadingScene : MonoBehaviour
 {
     public GameObject Loadingscreen;
     public Image LoadingBarFill;
+    public Slider slider;
 
-    public float loadingScreenDuration = 3.0f;
+    public float loadingScreenDuration = 0.8f;
     public void LoadScene(int sceneId)
     {
         StartCoroutine(LoadSceneAsync(sceneId));
     }
-
     IEnumerator LoadSceneAsync(int sceneId)
     {
         yield return new WaitForSeconds(loadingScreenDuration);
@@ -26,8 +26,8 @@ public class LoadingScene : MonoBehaviour
         while(!operation.isDone) 
         { 
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            LoadingBarFill.fillAmount = progressValue;
-
+            //LoadingBarFill.fillAmount = progressValue;
+            slider.value = progressValue;
             yield return null;
         }
     }
