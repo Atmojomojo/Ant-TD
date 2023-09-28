@@ -8,23 +8,32 @@ public class CameraLookAt : MonoBehaviour
 {
     public float moveSpeed;
     public GameObject cameraLookAt;
+    public bool left, right;
 
     
     // Update is called once per frame
     void Update()
     {
         transform.LookAt(cameraLookAt.transform.position);
+        if (left == true)
+        {
+            Vector3 velocity = -transform.right * moveSpeed * Time.deltaTime;
+            transform.position += velocity;
+        }
+        if (right == true)
+        {
+            Vector3 velocity = transform.right * moveSpeed * Time.deltaTime;
+            transform.position += velocity;
+        }
     }
 
     public void LeftMove()
     {
-        Vector3 velocity = -transform.right * moveSpeed * Time.deltaTime;
-        transform.position += velocity;
+        left = !left;
     }
 
     public void RightMove()
     {
-        Vector3 velocity = transform.right * moveSpeed * Time.deltaTime;
-        transform.position += velocity;
+        right = !right;
     }
 }

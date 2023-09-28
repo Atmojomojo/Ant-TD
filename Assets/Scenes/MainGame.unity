@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3525,8 +3525,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46b4cb0fc166af746a86e3fb622a3ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 100
+  moveSpeed: 30
   cameraLookAt: {fileID: 831652564}
+  left: 0
+  right: 0
 --- !u!4 &334957336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -3559,7 +3561,7 @@ PrefabInstance:
     - target: {fileID: 6254125646958971569, guid: 65fbabaa8eb67cc4a9dd7a34df3b3a00,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -43.88683
+      value: -87.9
       objectReference: {fileID: 0}
     - target: {fileID: 6254125646958971569, guid: 65fbabaa8eb67cc4a9dd7a34df3b3a00,
         type: 3}
@@ -3569,7 +3571,7 @@ PrefabInstance:
     - target: {fileID: 6254125646958971569, guid: 65fbabaa8eb67cc4a9dd7a34df3b3a00,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.7348146
+      value: -92.4
       objectReference: {fileID: 0}
     - target: {fileID: 6254125646958971569, guid: 65fbabaa8eb67cc4a9dd7a34df3b3a00,
         type: 3}
@@ -7494,7 +7496,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 50, y: 1.7611395, z: 50}
+  m_LocalScale: {x: 50, y: 1.56, z: 50}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -11550,7 +11552,7 @@ Transform:
   m_GameObject: {fileID: 1160789208}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.172316, y: -41.75482, z: -36.27}
+  m_LocalPosition: {x: 9.149, y: -41.75482, z: -36.345}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
