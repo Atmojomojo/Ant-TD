@@ -5030,8 +5030,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 933adb51a8b4da14e98893727fee883c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selected: 0
+  upgradeTower: {fileID: 0}
   turretUI: {fileID: 0}
+  turretCanvas: {fileID: 0}
+  upgradeButton: {fileID: 0}
+  startColor: {r: 0, g: 0, b: 0, a: 0}
+  maxLevelColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.8509804}
 --- !u!1 &7255904380897650609
 GameObject:
   m_ObjectHideFlags: 0

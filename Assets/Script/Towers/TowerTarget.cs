@@ -10,6 +10,8 @@ public class TowerTarget : MonoBehaviour
     private float timeStamp;
     public GameObject rotatePoint;
     public ParticleSystem particle;
+    public float damage, range;
+    public int towerLevel = 1;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,21 @@ public class TowerTarget : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (towerLevel == 1)
+        {
+            damage = towerSO.damage1;
+            range = towerSO.range1;
+        }
+        else if (towerLevel == 2)
+        {
+            damage = towerSO.damage2;
+            range = towerSO.range2;
+        }
+        else
+        {
+            damage = towerSO.damage3;
+            range = towerSO.range3;
+        }
         closestEnemy = GetClosestEnemy();
         
         if (closestEnemy != null )
@@ -26,7 +43,7 @@ public class TowerTarget : MonoBehaviour
             rotatePoint.transform.LookAt( closestEnemy.transform.position );
             if ( Time.time > timeStamp )
             {
-                closestEnemy.GetComponent<EnemyAI>().health -= towerSO.damage;
+                closestEnemy.GetComponent<EnemyAI>().health -= damage;
                 particle.Emit(1);
                 Debug.Log("Shoot");
                 timeStamp = Time.time + towerSO.attackspeed;
@@ -37,7 +54,7 @@ public class TowerTarget : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, towerSO.range);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
     public GameObject GetClosestEnemy()
@@ -50,7 +67,7 @@ public class TowerTarget : MonoBehaviour
         {
             float currentDistance;
             currentDistance = Vector3.Distance(transform.position, go.transform.position);
-            if (currentDistance < towerSO.range)
+            if (currentDistance < range)
             {
                 if (currentDistance < closestDistance)
                 {
