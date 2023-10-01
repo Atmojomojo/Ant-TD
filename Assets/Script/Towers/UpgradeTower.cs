@@ -25,18 +25,31 @@ public class UpgradeTower : MonoBehaviour
         {
             if (selectedTower.GetComponent<TowerTarget>().towerLevel == 1)
             {
-                upgradeButton.GetComponent<Image>().color = startColor;
                 upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost2;
                 upgradeText.SetText("<b> UPGRADE </b> <br>$" + upCost);
                 sellValue = selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2;
+                if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost2)
+                {
+                    upgradeButton.GetComponent<Image>().color = maxLevelColor;
+                }
+                else
+                {
+                    upgradeButton.GetComponent<Image>().color = startColor;
+                }
             }
             else if (selectedTower.GetComponent<TowerTarget>().towerLevel == 2)
             {
-                upgradeButton.GetComponent<Image>().color = startColor;
                 upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost3;
                 upgradeText.SetText("<b> UPGRADE </b> <br>$" + upCost);
                 sellValue = (selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost2 / 2);
-
+                if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost3)
+                {
+                    upgradeButton.GetComponent<Image>().color = maxLevelColor;
+                }
+                else
+                {
+                    upgradeButton.GetComponent<Image>().color = startColor;
+                }
             }
             else
             {
@@ -72,7 +85,7 @@ public class UpgradeTower : MonoBehaviour
 
     public void Sell()
     {
-        currency.currency -= sellValue;
+        currency.currency += sellValue;
         Destroy(selectedTower);
         canvas.enabled = false;
     }
