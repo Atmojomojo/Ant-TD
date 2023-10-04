@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class TowerTarget : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class TowerTarget : MonoBehaviour
     {
         closestEnemy = null;
     }
-    
+
     // Update is called once per frame
     void Update()
     {
@@ -37,11 +38,11 @@ public class TowerTarget : MonoBehaviour
             range = towerSO.range3;
         }
         closestEnemy = GetClosestEnemy();
-        
-        if (closestEnemy != null )
+
+        if (closestEnemy != null)
         {
-            rotatePoint.transform.LookAt( closestEnemy.transform.position );
-            if ( Time.time > timeStamp )
+            rotatePoint.transform.LookAt(closestEnemy.transform.position);
+            if (Time.time > timeStamp)
             {
                 closestEnemy.GetComponent<EnemyAI>().health -= damage;
                 particle.Emit(1);

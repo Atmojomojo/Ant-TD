@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.Universal;
 
 public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
@@ -12,6 +13,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public Color hoverColor;
     public GameObject turretCanvas;
     public GameObject turret;
+    public GameObject projector;
 
     public GameObject nut, berry, fire, spray, current;
 
@@ -21,6 +23,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     void Start()
     {
+        projector = GameObject.Find("Decal Tower Range");
         prefab = (GameObject.FindGameObjectsWithTag("Buildable"));
         turretCanvas = GameObject.Find("TurretCanvas");
         startColor = rend.GetComponent<Renderer>().material.color;
@@ -33,6 +36,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             prefab[i].GetComponent<TowerPlacement>().current = nut;
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
+        projector.GetComponent<DecalProjector>().enabled = false;
     }
     public void SelectBerry()
     {
@@ -41,6 +45,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             prefab[i].GetComponent<TowerPlacement>().current = berry;
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
+        projector.GetComponent<DecalProjector>().enabled = false;
 
     }
     public void SelectFire()
@@ -50,7 +55,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             prefab[i].GetComponent<TowerPlacement>().current = fire;
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
-
+        projector.GetComponent<DecalProjector>().enabled = false;
     }
 
     public void SelectSpray()
@@ -61,7 +66,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             prefab[i].GetComponent<TowerPlacement>().current = spray;
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
-
+        projector.GetComponent<DecalProjector>().enabled = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

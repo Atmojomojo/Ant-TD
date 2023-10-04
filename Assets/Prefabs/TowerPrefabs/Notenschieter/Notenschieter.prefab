@@ -5018,6 +5018,10 @@ MonoBehaviour:
   enemies: []
   rotatePoint: {fileID: 3061290730485377067}
   particle: {fileID: 4492416079840634426}
+  damage: 0
+  range: 0
+  towerLevel: 1
+  projector: {fileID: 0}
 --- !u!114 &2639125727546067760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5033,9 +5037,7 @@ MonoBehaviour:
   upgradeTower: {fileID: 0}
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
-  upgradeButton: {fileID: 0}
-  startColor: {r: 0, g: 0, b: 0, a: 0}
-  maxLevelColor: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.8509804}
+  projector: {fileID: 0}
 --- !u!1 &7255904380897650609
 GameObject:
   m_ObjectHideFlags: 0
