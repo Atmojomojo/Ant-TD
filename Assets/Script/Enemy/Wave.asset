@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   enemyType:
-  - enemy: {fileID: 8309029615891309095, guid: b6d1ff7723941a743a704cdc8bdbf3b7, type: 3}
+  - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
     numberOfType: 4
-    interval: 1
+    interval: 1.5
     intervalTilNextEnemyType: 4
   - enemy: {fileID: 6991931726067003526, guid: fc231efeadbabd64a93c47ffda2b86d1, type: 3}
     numberOfType: 2
-    interval: 2
+    interval: 3
     intervalTilNextEnemyType: 4
-  - enemy: {fileID: 8309029615891309095, guid: b6d1ff7723941a743a704cdc8bdbf3b7, type: 3}
+  - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
     numberOfType: 4
-    interval: 1
+    interval: 1.5
     intervalTilNextEnemyType: 4

@@ -16,6 +16,7 @@ public class EnemyAI : MonoBehaviour
     public Health playerHealth;
     private float timeStamp;
     public float attackCooldown;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,7 @@ public class EnemyAI : MonoBehaviour
             if (Time.time > timeStamp)
             {
                 playerHealth.health -= damage;
+                animator.SetTrigger("Attack");
                 timeStamp = Time.time + attackCooldown;
             }
         }
