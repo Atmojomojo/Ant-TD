@@ -26,6 +26,7 @@ public class resolutionBar : MonoBehaviour
         }
 
         resolutionDropdown.AddOptions(options);
-
     }
+
+
 }
