@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Noot : MonoBehaviour
 {
+    public float bulletSpeed;
     public void Start()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = ;
+        gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
     }
     public void OnCollisionEnter(Collision collision)
     {
