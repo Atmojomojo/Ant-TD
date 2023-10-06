@@ -133,7 +133,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2051348447372040843}
   m_Father: {fileID: 0}
@@ -155,7 +155,9 @@ MonoBehaviour:
   currency: {fileID: 0}
   hoverColor: {r: 0.49056602, g: 0.49056602, b: 0.49056602, a: 0}
   turretCanvas: {fileID: 0}
-  nut: {fileID: 7086186925053549443, guid: 52268c580b30b604f87e9839fbfab649, type: 3}
+  turret: {fileID: 0}
+  projector: {fileID: 0}
+  nut: {fileID: 1236514250363872554, guid: 58c0a1300a50a054c806eb97bd4d5dbe, type: 3}
   berry: {fileID: 0}
   fire: {fileID: 0}
   spray: {fileID: 0}

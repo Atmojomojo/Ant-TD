@@ -10,9 +10,11 @@ public class TowerTarget : MonoBehaviour
     public GameObject[] enemies;
     private float timeStamp;
     public GameObject rotatePoint;
-    public ParticleSystem particle;
     public float damage, range;
     public int towerLevel = 1;
+    public GameObject bullet;
+    public ParticleSystem attack;
+    public Transform shootPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,8 +46,8 @@ public class TowerTarget : MonoBehaviour
             rotatePoint.transform.LookAt(closestEnemy.transform.position);
             if (Time.time > timeStamp)
             {
+                Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                 closestEnemy.GetComponent<EnemyAI>().health -= damage;
-                particle.Emit(1);
                 Debug.Log("Shoot");
                 timeStamp = Time.time + towerSO.attackspeed;
             }

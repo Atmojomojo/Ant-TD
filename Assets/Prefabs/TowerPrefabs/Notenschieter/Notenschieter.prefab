@@ -5017,11 +5017,12 @@ MonoBehaviour:
   closestEnemy: {fileID: 0}
   enemies: []
   rotatePoint: {fileID: 3061290730485377067}
-  particle: {fileID: 4492416079840634426}
   damage: 0
   range: 0
   towerLevel: 1
-  projector: {fileID: 0}
+  bullet: {fileID: 3920035579025496563, guid: 823f1a7e5c7c7554eb566ba2c880bde3, type: 3}
+  attack: {fileID: 0}
+  shootPoint: {fileID: 0}
 --- !u!114 &2639125727546067760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5038,6 +5039,7 @@ MonoBehaviour:
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
   projector: {fileID: 0}
+  range: 0
 --- !u!1 &7255904380897650609
 GameObject:
   m_ObjectHideFlags: 0
