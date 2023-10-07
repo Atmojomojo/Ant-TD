@@ -16,7 +16,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.SetText("HP: " + health.ToString());
+        healthText.SetText(health.ToString());
         if (health <= 0)
         {
             Debug.Log("Game Over You Lost!!!");

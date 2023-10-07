@@ -16,6 +16,7 @@ public class UpgradeTower : MonoBehaviour
     public GameObject upgradeButton;
     public Color startColor;
     public Color maxLevelColor;
+    public GameObject image;
 
     public void Start()
     {
@@ -28,7 +29,8 @@ public class UpgradeTower : MonoBehaviour
             if (selectedTower.GetComponent<TowerTarget>().towerLevel == 1)
             {
                 upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost2;
-                upgradeText.SetText("<b> UPGRADE </b> <br>$" + upCost);
+                upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+                image.GetComponent<Image>().enabled = true;
                 sellValue = selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2;
                 levelText.SetText("<b> I </b>");
                 if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost2)
@@ -43,7 +45,8 @@ public class UpgradeTower : MonoBehaviour
             else if (selectedTower.GetComponent<TowerTarget>().towerLevel == 2)
             {
                 upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost3;
-                upgradeText.SetText("<b> UPGRADE </b> <br>$" + upCost);
+                upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+                image.GetComponent<Image>().enabled = true;
                 sellValue = (selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost2 / 2);
                 levelText.SetText("<b> II </b>");
                 if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost3)
@@ -58,12 +61,13 @@ public class UpgradeTower : MonoBehaviour
             else
             {
                 upgradeText.SetText("<b> MAX <br> UPGRADE </b>");
+                image.GetComponent<Image>().enabled = false;
                 upgradeButton.GetComponent<Image>().color = maxLevelColor;
                 sellValue = selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2;
                 sellValue = (selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost2 / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost3 / 2);
                 levelText.SetText("<b> III </b>");
             }
-            sellText.SetText("<b> SELL </b> <br>$" + sellValue);
+            sellText.SetText("<b> SELL </b> <br>" + sellValue);
         }
     }
     public void Upgrade()
