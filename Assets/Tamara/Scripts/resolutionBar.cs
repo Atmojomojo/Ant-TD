@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using TMPro;
-public class resolutionBar : MonoBehaviour
+
+
+public class ResolutionBar : MonoBehaviour
 {
     public TMP_Dropdown resolutionDropdown;
 
@@ -19,14 +21,35 @@ public class resolutionBar : MonoBehaviour
 
         List<string> options = new List<string>();
 
+        int currentResolutionIndex = 0;
         for (int i = 0; i < resolutions.Length; i++)
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
             options.Add(option);
+
+            if (resolutions[i].width == Screen.resolutions[currentResolutionIndex].width &&
+                resolutions[i].height == Screen.resolutions[currentResolutionIndex].height)
+            {
+                currentResolutionIndex = i;
+            }
+
         }
 
         resolutionDropdown.AddOptions(options);
+        resolutionDropdown.value = currentResolutionIndex;
+        resolutionDropdown.RefreshShownValue();
+
     }
 
+        public void SetResolution(int resolutionIndex)
+        {
+         Resolution resolution = resolutions[resolutionIndex];
+
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+
+        }
+   
+       
+        
 
 }

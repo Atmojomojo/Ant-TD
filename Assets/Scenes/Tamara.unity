@@ -2530,6 +2530,7 @@ GameObject:
   - component: {fileID: 450201924}
   - component: {fileID: 450201923}
   - component: {fileID: 450201929}
+  - component: {fileID: 450201930}
   m_Layer: 0
   m_Name: All scripts
   m_TagString: Untagged
@@ -2635,6 +2636,18 @@ MonoBehaviour:
   music: {fileID: 24100000, guid: 967c948287cd1d941bf758a2fc0e0adc, type: 2}
   sfx: {fileID: 24100000, guid: 346ec5ebe40496b4d866897691e48ac8, type: 2}
   allsounds: {fileID: 0}
+--- !u!114 &450201930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 450201922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130a57f363538ee49a2b32468bc7f40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &470315254
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,7 +5618,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 450201927}
+      - m_Target: {fileID: 450201930}
         m_TargetAssemblyTypeName: Fullscreen, Assembly-CSharp
         m_MethodName: ToggleFullscreen
         m_Mode: 1
@@ -11393,7 +11406,19 @@ MonoBehaviour:
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 450201923}
+        m_TargetAssemblyTypeName: ResolutionBar, Assembly-CSharp
+        m_MethodName: SetResolution
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_AlphaFadeSpeed: 0.15
 --- !u!114 &1975721250
 MonoBehaviour:
