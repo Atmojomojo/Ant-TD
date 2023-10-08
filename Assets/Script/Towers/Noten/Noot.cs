@@ -5,6 +5,7 @@ using UnityEngine;
 public class Noot : MonoBehaviour
 {
     public float bulletSpeed;
+    public float damage;
     public void Start()
     {
         gameObject.GetComponent<Rigidbody>().velocity = transform.forward * bulletSpeed;
@@ -13,7 +14,8 @@ public class Noot : MonoBehaviour
     {
         if (collision.transform.tag == "Enemy")
         {
-            collision.gameObject.GetComponent<EnemyAI>().health -= 0;
+            collision.gameObject.GetComponent<EnemyAI>().health -= damage;
+            print("Enemy Hit with noot. It did "+ damage + " Damage");
         }
         Destroy(gameObject);
     }

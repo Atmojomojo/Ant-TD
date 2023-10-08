@@ -9,12 +9,13 @@ public class TowerTarget : MonoBehaviour
     public GameObject closestEnemy;
     public GameObject[] enemies;
     private float timeStamp;
-    public GameObject rotatePoint;
+    public GameObject rotatePointHor, rotatePointVer;
     public float damage, range;
     public int towerLevel = 1;
-    public GameObject bullet;
+    public GameObject bullet, bulletShot;
     public ParticleSystem attack;
     public Transform shootPoint;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,11 +44,15 @@ public class TowerTarget : MonoBehaviour
 
         if (closestEnemy != null)
         {
-            rotatePoint.transform.LookAt(closestEnemy.transform.position);
+            Vector3 targetHor = new Vector3(closestEnemy.transform.position.x, transform.position.y, closestEnemy.transform.position.z);
+            rotatePointHor.transform.LookAt(targetHor);
+            rotatePointVer.transform.LookAt(closestEnemy.transform.position);
             if (Time.time > timeStamp)
             {
-                Instantiate(bullet, shootPoint.position, shootPoint.rotation);
-                closestEnemy.GetComponent<EnemyAI>().health -= damage;
+                animator.SetTrigger("Attack");
+                animator.SetTrigger("Balloon");
+                bulletShot = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
+                bulletShot.GetComponent<Noot>().damage = damage;
                 Debug.Log("Shoot");
                 timeStamp = Time.time + towerSO.attackspeed;
             }

@@ -24,7 +24,7 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
         {
             upgradeTower.selectedTower = gameObject;
             projector.GetComponent<DecalProjector>().enabled = true;
-            projector.transform.position = transform.position + new Vector3 (0, -0.8f, 0);
+            projector.transform.position = transform.position + new Vector3 (0, 0.5f, 0);
             turretUI.transform.position = transform.position;
             turretCanvas.GetComponent<Canvas>().enabled = true;
            

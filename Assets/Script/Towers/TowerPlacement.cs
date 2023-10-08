@@ -87,7 +87,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 {
                     if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
                     {
-                        turret = Instantiate(current, transform.position + positionOffset, transform.rotation);
+                        turret = Instantiate(current, transform.position, transform.rotation);
                         currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
                     }
                 }

@@ -29,15 +29,6 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
-        {
-            if (Time.time > timeStamp)
-            {
-                playerHealth.health -= damage;
-                animator.SetTrigger("Attack");
-                timeStamp = Time.time + attackCooldown;
-            }
-        }
         if (health <= 0)
         {
             if (currency.currency < currency.interest1)
@@ -70,6 +61,15 @@ public class EnemyAI : MonoBehaviour
                 currency.currency += interestBonus + interestBonus + interestBonus + interestBonus + interestBonus;
             }
             Destroy(gameObject);
-        }   
+        }
+        if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
+        {
+            if (Time.time > timeStamp)
+            {
+                playerHealth.health -= damage;
+                animator.SetTrigger("Attack");
+                timeStamp = Time.time + attackCooldown;
+            }
+        }
     }
 }
