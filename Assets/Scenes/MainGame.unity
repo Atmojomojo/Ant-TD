@@ -3635,7 +3635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34189cd81b76bf24f97e8592bee9b82a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currency: 0
+  currency: 15000
   interest1: 100
   interest2: 200
   interest3: 300
