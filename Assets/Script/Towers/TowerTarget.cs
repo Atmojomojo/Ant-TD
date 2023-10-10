@@ -50,7 +50,6 @@ public class TowerTarget : MonoBehaviour
             if (Time.time > timeStamp)
             {
                 animator.SetTrigger("Attack");
-                animator.SetTrigger("Balloon");
                 bulletShot = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                 bulletShot.GetComponent<Noot>().damage = damage;
                 Debug.Log("Shoot");
