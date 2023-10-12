@@ -12,6 +12,8 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     public GameObject turretCanvas;
     public GameObject projector;
     public float range;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +29,10 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
             projector.transform.position = transform.position + new Vector3 (0, 0.5f, 0);
             turretUI.transform.position = transform.position;
             turretCanvas.GetComponent<Canvas>().enabled = true;
-           
+            upgradeTower.nutI.SetActive(false);
+            upgradeTower.berryI.SetActive(false);
+            upgradeTower.fireI.SetActive(false);
+            upgradeTower.sprayI.SetActive(false);
         }
     }
 

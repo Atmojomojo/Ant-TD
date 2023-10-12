@@ -18,6 +18,7 @@ public class UpgradeTower : MonoBehaviour
     public Color maxLevelColor;
     public GameObject image;
 
+    public GameObject nutI, berryI, fireI, sprayI;
     public void Start()
     {
         startColor = upgradeButton.GetComponent<Image>().color;

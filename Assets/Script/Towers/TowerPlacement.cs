@@ -15,6 +15,9 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public GameObject turret;
     public GameObject projector;
 
+
+    public GameObject bNut, bBerry, bFire, bSpray, bCurrent, bPlaced;
+
     public GameObject nut, berry, fire, spray, current;
 
 
@@ -28,6 +31,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         turretCanvas = GameObject.Find("TurretCanvas");
         startColor = rend.GetComponent<Renderer>().material.color;
         currency = FindObjectOfType<Currency>();
+       
     }
     public void SelectNut()
     {
@@ -46,7 +50,6 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
         projector.GetComponent<DecalProjector>().enabled = false;
-
     }
     public void SelectFire()
     {
@@ -73,7 +76,11 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (current != null)
         {
-            rend.GetComponent<Renderer>().material.color = hoverColor;
+            if (turret == null)
+            {
+                bPlaced = Instantiate(bCurrent, transform.position, transform.rotation);
+                rend.GetComponent<Renderer>().material.color = hoverColor;
+            }
         }
     }
 
@@ -87,6 +94,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                 {
                     if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
                     {
+                        
                         turret = Instantiate(current, transform.position, transform.rotation);
                         currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
                     }
@@ -97,6 +105,10 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
    
     public void OnPointerExit(PointerEventData eventData)
     {
+        if (bPlaced != null)
+        {
+            Destroy(bPlaced); bPlaced = null;
+        }
         rend.GetComponent<Renderer>().material.color = startColor;
     }
    
@@ -105,6 +117,22 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     {
         if (current!= null)
         {
+            if (current == nut)
+            {
+                bCurrent = bNut;
+            }
+            else if (current == berry)
+            {
+                bCurrent = bBerry;
+            }
+            else if (current == fire)
+            {
+                bCurrent = fire;
+            }
+            else if (current == spray)
+            {
+                bCurrent = spray;
+            }
             if (turretCanvas.GetComponent<Canvas>().enabled == true)
             {
                 print("test");
