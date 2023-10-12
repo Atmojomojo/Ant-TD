@@ -14,16 +14,13 @@ public class CameraLookAt : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(cameraLookAt.transform.position);
         if (left == true)
         {
-            Vector3 velocity = -transform.right * moveSpeed * Time.deltaTime;
-            transform.position += velocity;
+            cameraLookAt.transform.Rotate(0, moveSpeed * Time.deltaTime, 0);
         }
         if (right == true)
         {
-            Vector3 velocity = transform.right * moveSpeed * Time.deltaTime;
-            transform.position += velocity;
+            cameraLookAt.transform.Rotate(0, -moveSpeed * Time.deltaTime, 0);
         }
     }
 
