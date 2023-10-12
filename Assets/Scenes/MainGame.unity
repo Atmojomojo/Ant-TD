@@ -7842,7 +7842,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 854495290}
         m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
         m_MethodName: SelectFire
         m_Mode: 1
@@ -10337,7 +10337,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395247620}
         m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
         m_MethodName: SelectSpray
         m_Mode: 1
@@ -11617,6 +11617,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a51289aed23d0c040a612c71cac80c8f, type: 3}
+--- !u!114 &789196214 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3178404556365033515, guid: a51289aed23d0c040a612c71cac80c8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 789196213}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef822ac78b55a489bdef9389a9c4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &790353134 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -12434,6 +12446,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a51289aed23d0c040a612c71cac80c8f, type: 3}
+--- !u!114 &854495290 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3178404556365033515, guid: a51289aed23d0c040a612c71cac80c8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 854495289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef822ac78b55a489bdef9389a9c4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &854512197 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -17987,7 +18011,7 @@ AudioSource:
   m_GameObject: {fileID: 1390255670}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 2360856167966195140, guid: 967c948287cd1d941bf758a2fc0e0adc,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 967c948287cd1d941bf758a2fc0e0adc,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 0e65a46ec62ebd84eaa7b4dd39806e77, type: 3}
   m_PlayOnAwake: 1
@@ -18164,6 +18188,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a51289aed23d0c040a612c71cac80c8f, type: 3}
+--- !u!114 &1395247620 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3178404556365033515, guid: a51289aed23d0c040a612c71cac80c8f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1395247619}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6ef822ac78b55a489bdef9389a9c4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1397183983 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -23056,7 +23092,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1395247620}
         m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
         m_MethodName: SelectNut
         m_Mode: 1
@@ -24830,7 +24866,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 789196214}
         m_TargetAssemblyTypeName: TowerPlacement, Assembly-CSharp
         m_MethodName: SelectBerry
         m_Mode: 1
