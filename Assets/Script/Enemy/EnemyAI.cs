@@ -64,12 +64,8 @@ public class EnemyAI : MonoBehaviour
         }
         if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
         {
-            if (Time.time > timeStamp)
-            {
-                playerHealth.health -= damage;
-                animator.SetTrigger("Attack");
-                timeStamp = Time.time + attackCooldown;
-            }
+            playerHealth.health -= damage;
+            Destroy(gameObject);
         }
     }
 }
