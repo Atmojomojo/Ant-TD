@@ -13,19 +13,12 @@ public class MountedTurret : MonoBehaviour
     private float rotationX = -90f;
     private float rotationY = 0f;
 
-    private void Start()
-    {
-        Cursor.lockState = CursorLockMode.Locked;
-    }
 
     public void Update()
     {
         // Get the input from the Look action defined in the Input Actions asset
         inputVector = InputSystem.GetDevice<Mouse>().delta.ReadValue();
 
-        //print(InputSystem.GetDevice<Mouse>().delta.ReadValue());
-        //print(rotationY);
-        print (rotationX);
         // Rotate the camera based on the input
         float mouseX = inputVector.x * sensitivity;
         float mouseY = inputVector.y * sensitivity;
