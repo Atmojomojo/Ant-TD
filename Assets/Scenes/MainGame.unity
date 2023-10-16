@@ -2823,7 +2823,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1440, y: -815}
+  m_AnchoredPosition: {x: 744, y: -293}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &145537391
@@ -4398,7 +4398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   healthText: {fileID: 312919564}
-  deathScreen: {fileID: 130628854}
+  deathScreen: {fileID: 403486952}
 --- !u!114 &260013577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13749,7 +13749,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 480, y: -815}
+  m_AnchoredPosition: {x: 248, y: -293}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867744214
