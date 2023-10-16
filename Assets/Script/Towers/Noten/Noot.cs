@@ -11,7 +11,7 @@ public class Noot : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.velocity = transform.forward * bulletSpeed; // Set the initial forward velocity
+        rb.velocity = -transform.up * bulletSpeed; // Set the initial forward velocity
     }
 
     void Update()
