@@ -172,5 +172,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 16
-  gravity: 0.7
+  gravity: 0.5
   damage: 0.2
