@@ -12,6 +12,8 @@ public class Audio : MonoBehaviour
     public AudioMixer music;
     public AudioMixer sfx;
     public AudioMixer allsounds;
+    
+  
 
     void Start()
     {

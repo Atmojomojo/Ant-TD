@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
-using TMPro;
+
 
 
 public class ResolutionBar : MonoBehaviour

@@ -17,11 +17,12 @@ public class LoadingScene : MonoBehaviour
     }
     IEnumerator LoadSceneAsync(int sceneId)
     {
+        Loadingscreen.SetActive(true);
+
         yield return new WaitForSeconds(loadingScreenDuration);
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneId);
         
-        Loadingscreen.SetActive(true);
 
         while(!operation.isDone) 
         { 
