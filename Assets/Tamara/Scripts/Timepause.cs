@@ -1,54 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Unity.UI;
-using UnityEngine.InputSystem;
 
-
-public class Timepause : MonoBehaviour
+public class TimePause : MonoBehaviour
 {
-    private bool isPaused = false;
+    
+        private bool isPaused = false;
 
-    public Canvas ingameUI;
+        public void PauseTime()
+        {
+            if (!isPaused)
+            {
+                Time.timeScale = 0;
+                isPaused = true;
+            }
+        }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.P))
+        public void ResumeTime()
         {
             if (isPaused)
             {
-                ResumeTime();
-            }
-            else
-            {
-                PauseTime();
+                Time.timeScale = 1;
+                isPaused = false;
             }
         }
-    }
-
-    void PauseTime()
-    {
-        Time.timeScale = 0; 
-        isPaused = true;
-    }
-
-    void ResumeTime()
-    {
-        Time.timeScale = 1;
-        isPaused = false;
-    }
-
     
-    public void OpenCanvas()
-    {
-        ingameUI.gameObject.SetActive(true);
-        PauseTime();
-    }
-
-    
-    public void CloseCanvas()
-    {
-        ingameUI.gameObject.SetActive(false);
-        ResumeTime();
-    }
 }
