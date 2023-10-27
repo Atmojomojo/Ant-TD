@@ -15,7 +15,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public GameObject turret;
     public GameObject projector;
 
-
+    // b staat voor buildmode
     public GameObject bNut, bBerry, bFire, bSpray, bCurrent, bPlaced;
 
     public GameObject nut, berry, fire, spray, current;
@@ -92,12 +92,24 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             {
                 if (turret == null)
                 {
-                    if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
+                    if (current == nut)
                     {
-                        
-                        turret = Instantiate(current, transform.position, transform.rotation);
-                        currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
+                        if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
+                        {
+
+                            turret = Instantiate(current, transform.position, transform.rotation);
+                            currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
+                        }
                     }
+                    else
+                    {
+                        if (current.GetComponent<ManualTower>().towerSO.cost <= currency.currency)
+                        {
+                            turret = Instantiate(current, transform.position, transform.rotation);
+                            currency.currency -= current.GetComponent<ManualTower>().towerSO.cost;
+                        }
+                    }
+                    
                 }
             }
         }
@@ -121,17 +133,17 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             {
                 bCurrent = bNut;
             }
-            else if (current == berry)
+            if (current == berry)
             {
                 bCurrent = bBerry;
             }
-            else if (current == fire)
+            if (current == fire)
             {
-                bCurrent = fire;
+                bCurrent = bFire;
             }
-            else if (current == spray)
+            if (current == spray)
             {
-                bCurrent = spray;
+                bCurrent = bSpray;
             }
             if (turretCanvas.GetComponent<Canvas>().enabled == true)
             {

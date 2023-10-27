@@ -13,7 +13,6 @@ public class TowerTarget : MonoBehaviour
     public float damage, range;
     public int towerLevel = 1;
     public GameObject bullet, bulletShot;
-    public ParticleSystem attack;
     public Transform shootPoint;
     public Animator animator;
     // Start is called before the first frame update

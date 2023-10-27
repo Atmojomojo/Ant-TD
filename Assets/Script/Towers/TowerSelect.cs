@@ -41,8 +41,17 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     {
        if (upgradeTower.selectedTower != null)
         {
-            range = upgradeTower.selectedTower.GetComponent<TowerTarget>().range;
-            projector.GetComponent<DecalProjector>().size = new Vector3(range + range, range + range, 1f);
+            if (upgradeTower.selectedTower.GetComponent<TowerTarget>() != null)
+            {
+                range = upgradeTower.selectedTower.GetComponent<TowerTarget>().range;
+                projector.GetComponent<DecalProjector>().size = new Vector3(range + range, range + range, 1f);
+            }
+            else if (upgradeTower.selectedTower.GetComponent<ManualTower>() != null)
+            {
+                range = upgradeTower.selectedTower.GetComponent<ManualTower>().range;
+                // Projector van manual tower moet een cone shape hebben ipv circkel
+                projector.GetComponent<DecalProjector>().size = new Vector3(range + range, range + range, 1f);
+            }
         }
        if (turretUI == null)
         {

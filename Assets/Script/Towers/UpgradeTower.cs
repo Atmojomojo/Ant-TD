@@ -18,6 +18,10 @@ public class UpgradeTower : MonoBehaviour
     public Color maxLevelColor;
     public GameObject image;
 
+    private TowerTarget towerTargetScript;
+    private ManualTower manualTowerScript;
+    private bool tower;
+
     public GameObject nutI, berryI, fireI, sprayI;
     public void Start()
     {
@@ -27,68 +31,153 @@ public class UpgradeTower : MonoBehaviour
     {
         if (selectedTower != null)
         {
-            if (selectedTower.GetComponent<TowerTarget>().towerLevel == 1)
+            if (selectedTower.GetComponent<TowerTarget>() != null)
             {
-                upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost2;
-                upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
-                image.GetComponent<Image>().enabled = true;
-                sellValue = selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2;
-                levelText.SetText("<b> I </b>");
-                if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost2)
-                {
-                    upgradeButton.GetComponent<Image>().color = maxLevelColor;
-                }
-                else
-                {
-                    upgradeButton.GetComponent<Image>().color = startColor;
-                }
+                towerTargetScript = selectedTower.GetComponent<TowerTarget>();
+                TowerTargetScriptUpdate();
             }
-            else if (selectedTower.GetComponent<TowerTarget>().towerLevel == 2)
+            else if (selectedTower.GetComponent<ManualTower>() != null)
             {
-                upCost = selectedTower.GetComponent<TowerTarget>().towerSO.upCost3;
-                upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
-                image.GetComponent<Image>().enabled = true;
-                sellValue = (selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost2 / 2);
-                levelText.SetText("<b> II </b>");
-                if (currency.currency < selectedTower.GetComponent<TowerTarget>().towerSO.upCost3)
-                {
-                    upgradeButton.GetComponent<Image>().color = maxLevelColor;
-                }
-                else
-                {
-                    upgradeButton.GetComponent<Image>().color = startColor;
-                }
+                manualTowerScript = selectedTower.GetComponent<ManualTower>();
+                ManualTowerScriptUpdate();
+            }
+            
+        }
+    }
+
+    public void TowerTargetScriptUpdate()
+    {
+        if (towerTargetScript.towerLevel == 1)
+        {
+            upCost = towerTargetScript.towerSO.upCost2;
+            upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+            image.GetComponent<Image>().enabled = true;
+            sellValue = towerTargetScript.towerSO.cost / 2;
+            levelText.SetText("<b> I </b>");
+            if (currency.currency < towerTargetScript.towerSO.upCost2)
+            {
+                upgradeButton.GetComponent<Image>().color = maxLevelColor;
             }
             else
             {
-                upgradeText.SetText("<b> MAX <br> UPGRADE </b>");
-                image.GetComponent<Image>().enabled = false;
-                upgradeButton.GetComponent<Image>().color = maxLevelColor;
-                sellValue = selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2;
-                sellValue = (selectedTower.GetComponent<TowerTarget>().towerSO.cost / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost2 / 2) + (selectedTower.GetComponent<TowerTarget>().towerSO.upCost3 / 2);
-                levelText.SetText("<b> III </b>");
+                upgradeButton.GetComponent<Image>().color = startColor;
             }
-            sellText.SetText("<b> SELL </b> <br>" + sellValue);
         }
-    }
-    public void Upgrade()
-    {
-        if (selectedTower.GetComponent<TowerTarget>().towerLevel == 1)
+        else if (towerTargetScript.towerLevel == 2)
         {
-            if (currency.currency >= selectedTower.GetComponent<TowerTarget>().towerSO.upCost2)
+            upCost = towerTargetScript.towerSO.upCost3;
+            upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+            image.GetComponent<Image>().enabled = true;
+            sellValue = (towerTargetScript.towerSO.cost / 2) + (towerTargetScript.towerSO.upCost2 / 2);
+            levelText.SetText("<b> II </b>");
+            if (currency.currency < towerTargetScript.towerSO.upCost3)
             {
-                currency.currency -= selectedTower.GetComponent<TowerTarget>().towerSO.upCost2;
-                selectedTower.GetComponent<TowerTarget>().towerLevel = 2;
-                print("test");
+                upgradeButton.GetComponent<Image>().color = maxLevelColor;
+            }
+            else
+            {
+                upgradeButton.GetComponent<Image>().color = startColor;
             }
         }
         else
         {
-            if (currency.currency >= selectedTower.GetComponent<TowerTarget>().towerSO.upCost3)
+            upgradeText.SetText("<b> MAX <br> UPGRADE </b>");
+            image.GetComponent<Image>().enabled = false;
+            upgradeButton.GetComponent<Image>().color = maxLevelColor;
+            sellValue = towerTargetScript.towerSO.cost / 2;
+            sellValue = (towerTargetScript.towerSO.cost / 2) + (towerTargetScript.towerSO.upCost2 / 2) + (towerTargetScript.towerSO.upCost3 / 2);
+            levelText.SetText("<b> III </b>");
+        }
+        sellText.SetText("<b> SELL </b> <br>" + sellValue);
+    }
+
+    public void ManualTowerScriptUpdate()
+    {
+        if (manualTowerScript.towerLevel == 1)
+        {
+            upCost = manualTowerScript.towerSO.upCost2;
+            upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+            image.GetComponent<Image>().enabled = true;
+            sellValue = manualTowerScript.towerSO.cost / 2;
+            levelText.SetText("<b> I </b>");
+            if (currency.currency < manualTowerScript.towerSO.upCost2)
             {
-                currency.currency -= selectedTower.GetComponent<TowerTarget>().towerSO.upCost3;
-                selectedTower.GetComponent<TowerTarget>().towerLevel = 3;
-                print("test");
+                upgradeButton.GetComponent<Image>().color = maxLevelColor;
+            }
+            else
+            {
+                upgradeButton.GetComponent<Image>().color = startColor;
+            }
+        }
+        else if (manualTowerScript.towerLevel == 2)
+        {
+            upCost = manualTowerScript.towerSO.upCost3;
+            upgradeText.SetText("<b> UPGRADE </b> <br>" + upCost);
+            image.GetComponent<Image>().enabled = true;
+            sellValue = (manualTowerScript.towerSO.cost / 2) + (manualTowerScript.towerSO.upCost2 / 2);
+            levelText.SetText("<b> II </b>");
+            if (currency.currency < manualTowerScript.towerSO.upCost3)
+            {
+                upgradeButton.GetComponent<Image>().color = maxLevelColor;
+            }
+            else
+            {
+                upgradeButton.GetComponent<Image>().color = startColor;
+            }
+        }
+        else
+        {
+            upgradeText.SetText("<b> MAX <br> UPGRADE </b>");
+            image.GetComponent<Image>().enabled = false;
+            upgradeButton.GetComponent<Image>().color = maxLevelColor;
+            sellValue = manualTowerScript.towerSO.cost / 2;
+            sellValue = (manualTowerScript.towerSO.cost / 2) + (manualTowerScript.towerSO.upCost2 / 2) + (manualTowerScript.towerSO.upCost3 / 2);
+            levelText.SetText("<b> III </b>");
+        }
+        sellText.SetText("<b> SELL </b> <br>" + sellValue);
+    }
+    public void Upgrade()
+    {
+        if (selectedTower.GetComponent<TowerTarget>() != null)
+        {
+            if (towerTargetScript.towerLevel == 1)
+            {
+                if (currency.currency >= towerTargetScript.towerSO.upCost2)
+                {
+                    currency.currency -= towerTargetScript.towerSO.upCost2;
+                    towerTargetScript.towerLevel = 2;
+                    print("test");
+                }
+            }
+            else
+            {
+                if (currency.currency >= towerTargetScript.towerSO.upCost3)
+                {
+                    currency.currency -= towerTargetScript.towerSO.upCost3;
+                    towerTargetScript.towerLevel = 3;
+                    print("test");
+                }
+            }
+        }
+        else if (selectedTower.GetComponent<ManualTower>() != null)
+        {
+            if (manualTowerScript.towerLevel == 1)
+            {
+                if (currency.currency >= manualTowerScript.towerSO.upCost2)
+                {
+                    currency.currency -= manualTowerScript.towerSO.upCost2;
+                    manualTowerScript.towerLevel = 2;
+                    print("test");
+                }
+            }
+            else
+            {
+                if (currency.currency >= manualTowerScript.towerSO.upCost3)
+                {
+                    currency.currency -= manualTowerScript.towerSO.upCost3;
+                    manualTowerScript.towerLevel = 3;
+                    print("test");
+                }
             }
         }
     }
