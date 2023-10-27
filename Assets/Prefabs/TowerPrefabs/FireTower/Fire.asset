@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4894de884e271498336e79eea13418, type: 3}
   m_Name: Fire
   m_EditorClassIdentifier: 
-  range1: 0
-  range2: 0
-  range3: 0
-  damage1: 0
-  damage2: 0
-  damage3: 0
-  attackspeed: 0
-  cooldownTime: 0
-  cost: 0
-  upCost2: 0
-  upCost3: 0
+  range1: 1
+  range2: 1.5
+  range3: 2
+  damage1: 1
+  damage2: 1.5
+  damage3: 2
+  attackspeed: 1
+  cooldownTime: 1
+  cost: 400
+  upCost2: 500
+  upCost3: 600
