@@ -2574,7 +2574,6 @@ MonoBehaviour:
   towerLevel: 1
   bullet: {fileID: 3920035579025496563, guid: 823f1a7e5c7c7554eb566ba2c880bde3, type: 3}
   bulletShot: {fileID: 0}
-  attack: {fileID: 0}
   shootPoint: {fileID: 8031588630179218447}
   animator: {fileID: 7251910292852217237}
 --- !u!114 &2217491135110589365
@@ -2593,6 +2592,8 @@ MonoBehaviour:
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
   projector: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
   range: 0
 --- !u!95 &7251910292852217237
 Animator:

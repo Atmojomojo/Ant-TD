@@ -11,6 +11,7 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     public GameObject turretUI;
     public GameObject turretCanvas;
     public GameObject projector;
+    public GameObject leftui, rightui;
     public float range;
 
     
@@ -19,6 +20,8 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
     {
         upgradeTower = FindAnyObjectByType<UpgradeTower>();
         projector = GameObject.Find("Decal Tower Range");
+        leftui = GameObject.Find("Left");
+        rightui = GameObject.Find("Right");
     }
     public void OnPointerDown(PointerEventData eventData)
     {
@@ -33,14 +36,37 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
             upgradeTower.berryI.SetActive(false);
             upgradeTower.fireI.SetActive(false);
             upgradeTower.sprayI.SetActive(false);
+            if (gameObject.name == "Noten V2(Clone)")
+            {
+                leftui.GetComponent<Image>().enabled = false;
+                leftui.GetComponent<Button>().enabled = false;
+                rightui.GetComponent<Image>().enabled = false;
+                rightui.GetComponent<Button>().enabled = false;
+            }
+            else
+            {
+                leftui.GetComponent<Image>().enabled = true;
+                leftui.GetComponent<Button>().enabled = true;
+                rightui.GetComponent<Image>().enabled = true;
+                rightui.GetComponent<Button>().enabled = true;
+            }
         }
     }
 
+    public void RotateLeft()
+    {
+        upgradeTower.selectedTower.transform.Rotate(Vector3.up * 90);
+    }
+
+    public void RotateRight()
+    {
+        upgradeTower.selectedTower.transform.Rotate(Vector3.down * 90);
+    }
     // Update is called once per frame
     void Update()
     {
        if (upgradeTower.selectedTower != null)
-        {
+       {
             if (upgradeTower.selectedTower.GetComponent<TowerTarget>() != null)
             {
                 range = upgradeTower.selectedTower.GetComponent<TowerTarget>().range;
@@ -52,14 +78,14 @@ public class TowerSelect : MonoBehaviour, IPointerDownHandler
                 // Projector van manual tower moet een cone shape hebben ipv circkel
                 projector.GetComponent<DecalProjector>().size = new Vector3(range + range, range + range, 1f);
             }
-        }
+       }
        if (turretUI == null)
-        {
-            turretUI = GameObject.Find("TurretUI");
-        }
+       {
+           turretUI = GameObject.Find("TurretUI");
+       }
        if (turretCanvas == null)
-        {
-            turretCanvas = GameObject.Find("TurretCanvas");
-        }
+       {
+           turretCanvas = GameObject.Find("TurretCanvas");
+       }
     }
 }

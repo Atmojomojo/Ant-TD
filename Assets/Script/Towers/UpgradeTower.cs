@@ -20,7 +20,6 @@ public class UpgradeTower : MonoBehaviour
 
     private TowerTarget towerTargetScript;
     private ManualTower manualTowerScript;
-    private bool tower;
 
     public GameObject nutI, berryI, fireI, sprayI;
     public void Start()
