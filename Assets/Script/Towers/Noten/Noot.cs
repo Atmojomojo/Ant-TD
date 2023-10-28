@@ -22,6 +22,7 @@ public class Noot: MonoBehaviour
             if (enemy != null)
             {
                 enemy.health -= damage;
+                enemy.hitParticle.Play();
                 print("Enemy Hit with noot. It did " + damage + " Damage");
             }
         }

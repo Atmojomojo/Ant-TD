@@ -17,6 +17,8 @@ public class EnemyAI : MonoBehaviour
     private float timeStamp;
     public float attackCooldown;
     public Animator animator;
+    public ParticleSystem hitParticle;
+    public GameObject deadParticle;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,6 +63,7 @@ public class EnemyAI : MonoBehaviour
                 currency.currency += interestBonus + interestBonus + interestBonus + interestBonus + interestBonus;
             }
             Destroy(gameObject);
+            Instantiate(deadParticle, transform.position, transform.rotation);
         }
         if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
         {

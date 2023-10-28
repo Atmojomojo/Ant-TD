@@ -2592,8 +2592,8 @@ MonoBehaviour:
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
   projector: {fileID: 0}
-  left: {fileID: 0}
-  right: {fileID: 0}
+  leftui: {fileID: 0}
+  rightui: {fileID: 0}
   range: 0
 --- !u!95 &7251910292852217237
 Animator:
