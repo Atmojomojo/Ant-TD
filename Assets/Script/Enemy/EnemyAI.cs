@@ -25,6 +25,8 @@ public class EnemyAI : MonoBehaviour
     public float fireDamage;
     private float timeStamp;
     public float fireTickCooldown;
+
+    public float sprayTimeStamp;
     // Start is called before the first frame update
     void Start()
     {

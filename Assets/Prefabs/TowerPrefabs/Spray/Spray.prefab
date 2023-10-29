@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6710980270865152082
+--- !u!1001 &5274914835960665489
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,71 +8,97 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 7375688541925851459}
     m_Modifications:
-    - target: {fileID: 3877497267301909396, guid: 3299187bbe192f54cb35badd1d74bada,
-        type: 3}
-      propertyPath: m_Name
-      value: SprayCanParticleParent
-      objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.5921
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.218
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.98914456
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.7071068
+      value: 0.14694625
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
+      value: 16.9
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+    - target: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687602456914531452, guid: b80f683227161a445a5a91e6e0b71183,
+        type: 3}
+      propertyPath: ExternalForcesModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687602456914531452, guid: b80f683227161a445a5a91e6e0b71183,
+        type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687602456914531452, guid: b80f683227161a445a5a91e6e0b71183,
+        type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687602456914531452, guid: b80f683227161a445a5a91e6e0b71183,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8587058154515195079, guid: b80f683227161a445a5a91e6e0b71183,
+        type: 3}
+      propertyPath: m_Name
+      value: SprayCanParticleParent 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3299187bbe192f54cb35badd1d74bada, type: 3}
---- !u!4 &2701410696899795970 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8673765444470269008, guid: 3299187bbe192f54cb35badd1d74bada,
+  m_SourcePrefab: {fileID: 100100000, guid: b80f683227161a445a5a91e6e0b71183, type: 3}
+--- !u!1 &4476324030820938070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8587058154515195079, guid: b80f683227161a445a5a91e6e0b71183,
     type: 3}
-  m_PrefabInstance: {fileID: 6710980270865152082}
+  m_PrefabInstance: {fileID: 5274914835960665489}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8327116620782704274 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4232151556232741635, guid: b80f683227161a445a5a91e6e0b71183,
+    type: 3}
+  m_PrefabInstance: {fileID: 5274914835960665489}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7048429030404892328
 PrefabInstance:
@@ -153,7 +179,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e20dfebda7f6b55489b36083e92855fb,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2701410696899795970}
+      addedObject: {fileID: 8327116620782704274}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e20dfebda7f6b55489b36083e92855fb,
         type: 3}
@@ -163,6 +189,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 3551542060622541315}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e20dfebda7f6b55489b36083e92855fb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7818999019332575311}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e20dfebda7f6b55489b36083e92855fb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5451454298802216180}
     - targetCorrespondingSourceObject: {fileID: -5568371526223589888, guid: e20dfebda7f6b55489b36083e92855fb,
         type: 3}
       insertIndex: -1
@@ -227,6 +261,7 @@ MonoBehaviour:
   angle: 0
   attackPoint: {fileID: 0}
   fireTower: {fileID: 0}
+  sprayTower: {fileID: 7818999019332575311}
 --- !u!114 &3551542060622541315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,3 +281,39 @@ MonoBehaviour:
   leftui: {fileID: 0}
   rightui: {fileID: 0}
   range: 0
+--- !u!114 &7818999019332575311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858892443416566777}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d47c1c3c533bc46b7e09c06a809cdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manual: {fileID: 45472598505363952}
+  animator: {fileID: 5451454298802216180}
+  attackParticle: {fileID: 4476324030820938070}
+--- !u!95 &5451454298802216180
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7858892443416566777}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: e20dfebda7f6b55489b36083e92855fb, type: 3}
+  m_Controller: {fileID: 9100000, guid: 28c3bf9644768274d8ed4164f857178c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

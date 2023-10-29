@@ -12,6 +12,7 @@ public class ManualTower : MonoBehaviour
     private float lastAttackTime = 0f; // Track the last attack time
     public Transform attackPoint; // Set the attack point in the Inspector
     public FireTower fireTower;
+    public SprayTower sprayTower;
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +32,27 @@ public class ManualTower : MonoBehaviour
         {
             damage = towerSO.damage2;
             range = towerSO.range2;
+            if (fireTower != null)
+            {
+                fireTower.ParticleRange2();
+            }
+            else if (sprayTower != null)
+            {
+                sprayTower.ParticleRange2();
+            }
         }
         else
         {
             damage = towerSO.damage3;
             range = towerSO.range3;
+            if (fireTower != null)
+            {
+                fireTower.ParticleRange3();
+            }
+            else if (sprayTower != null)
+            {
+                sprayTower.ParticleRange3();
+            }
         }
 
         // Check for enemies in range and attack them
@@ -48,6 +65,10 @@ public class ManualTower : MonoBehaviour
                 {
                     fireTower.Idle();
                 }
+                else if (sprayTower != null)
+                {
+                    sprayTower.Idle();
+                }
             }
             else
             {
@@ -56,6 +77,10 @@ public class ManualTower : MonoBehaviour
                     if (fireTower != null)
                     {
                         fireTower.Attack(target);
+                    }
+                    else if (sprayTower != null)
+                    {
+                        sprayTower.Attack(target);
                     }
                 }
             }
