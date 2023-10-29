@@ -9,7 +9,8 @@ public class UpgradeTower : MonoBehaviour
     public GameObject selectedTower;
     public Currency currency;
     public Canvas canvas;
-    public DecalProjector projector;
+    public DecalProjector projector, coneProjector;
+    public GameObject towerRange;
     public TMP_Text sellText, upgradeText, levelText;
     public float sellValue;
     public float upCost;
@@ -164,6 +165,7 @@ public class UpgradeTower : MonoBehaviour
             {
                 if (currency.currency >= manualTowerScript.towerSO.upCost2)
                 {
+                    coneProjector.transform.position = selectedTower.transform.position + selectedTower.transform.forward * manualTowerScript.towerSO.range2 / 2;
                     currency.currency -= manualTowerScript.towerSO.upCost2;
                     manualTowerScript.towerLevel = 2;
                     print("test");
@@ -173,6 +175,7 @@ public class UpgradeTower : MonoBehaviour
             {
                 if (currency.currency >= manualTowerScript.towerSO.upCost3)
                 {
+                    coneProjector.transform.position = selectedTower.transform.position + selectedTower.transform.forward * manualTowerScript.towerSO.range3 / 2;
                     currency.currency -= manualTowerScript.towerSO.upCost3;
                     manualTowerScript.towerLevel = 3;
                     print("test");

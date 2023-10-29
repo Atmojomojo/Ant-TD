@@ -13,7 +13,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public Color hoverColor;
     public GameObject turretCanvas;
     public GameObject turret;
-    public GameObject projector;
+    public GameObject projector, coneProjector;
 
     // b staat voor buildmode
     public GameObject bNut, bBerry, bFire, bSpray, bCurrent, bPlaced;
@@ -26,6 +26,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     // Start is called before the first frame update
     void Start()
     {
+        coneProjector = GameObject.Find("Decal Tower ConeRange");
         projector = GameObject.Find("Decal Tower Range");
         prefab = (GameObject.FindGameObjectsWithTag("Buildable"));
         turretCanvas = GameObject.Find("TurretCanvas");
@@ -41,6 +42,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
         projector.GetComponent<DecalProjector>().enabled = false;
+        coneProjector.GetComponent<DecalProjector>().enabled = false;
     }
     public void SelectBerry()
     {
@@ -50,6 +52,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
         projector.GetComponent<DecalProjector>().enabled = false;
+        coneProjector.GetComponent<DecalProjector>().enabled = false;
     }
     public void SelectFire()
     {
@@ -59,6 +62,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
         projector.GetComponent<DecalProjector>().enabled = false;
+        coneProjector.GetComponent<DecalProjector>().enabled = false;
     }
 
     public void SelectSpray()
@@ -70,6 +74,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         }
         turretCanvas.GetComponent<Canvas>().enabled = false;
         projector.GetComponent<DecalProjector>().enabled = false;
+        coneProjector.GetComponent<DecalProjector>().enabled = false;
     }
 
     public void OnPointerEnter(PointerEventData eventData)

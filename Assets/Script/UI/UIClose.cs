@@ -9,10 +9,11 @@ public class UIClose : MonoBehaviour
     public GameObject turretCanvas;
     private InputAction action;
     public UpgradeTower upgradeTower;
-    public DecalProjector projector;
+    public DecalProjector projector, coneProjector;
     public void OnCloseUI()
     {
         projector.enabled = false;
+        coneProjector.enabled = false;
         turretCanvas.GetComponent<Canvas>().enabled = false;
     }
     private void OnEnable()

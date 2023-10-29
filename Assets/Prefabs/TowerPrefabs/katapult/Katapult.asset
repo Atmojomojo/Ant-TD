@@ -15,7 +15,7 @@ MonoBehaviour:
   range1: 8
   range2: 12
   range3: 14
-  coneAngle: 45
+  coneAngle: 60
   damage1: 4
   damage2: 6
   damage3: 8
