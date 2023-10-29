@@ -13,12 +13,18 @@ public class EnemyAI : MonoBehaviour
     public float worth;
     public float interestBonus;
     public int damage;
+
     public Health playerHealth;
-    private float timeStamp;
-    public float attackCooldown;
+    
     public Animator animator;
+    
     public ParticleSystem hitParticle;
-    public GameObject deadParticle;
+    public GameObject deadParticle, fireParticle;
+    
+    public int fireTicks;
+    public float fireDamage;
+    private float timeStamp;
+    public float fireTickCooldown;
     // Start is called before the first frame update
     void Start()
     {
@@ -69,6 +75,20 @@ public class EnemyAI : MonoBehaviour
         {
             playerHealth.health -= damage;
             Destroy(gameObject);
+        }
+        if (fireTicks > 0)
+        {
+            fireParticle.SetActive(true);
+            if (Time.time > timeStamp)
+            {
+                health -= fireDamage;
+                fireTicks -= 1;
+                timeStamp = Time.time + fireTickCooldown;
+            }
+        }
+        else
+        {
+            fireParticle.SetActive(false);
         }
     }
 }

@@ -158,14 +158,14 @@ MonoBehaviour:
   turret: {fileID: 0}
   projector: {fileID: 0}
   bNut: {fileID: 1865945299105909144, guid: e973826a843403c45af4804d43850da1, type: 3}
-  bBerry: {fileID: 0}
+  bBerry: {fileID: 7430245421728869728, guid: 6fc93f1047398b64aa0306304f9e21fd, type: 3}
   bFire: {fileID: 5980049068474926190, guid: 5a4033e368ebf184e99dfdbe162fd91f, type: 3}
-  bSpray: {fileID: 0}
+  bSpray: {fileID: 7858892443416566777, guid: 0ad848fb1ddcd2a429a6c82a6062645d, type: 3}
   bCurrent: {fileID: 0}
   bPlaced: {fileID: 0}
   nut: {fileID: 7668967169522607411, guid: 43968fa16cca20541839312e0dc51d1d, type: 3}
-  berry: {fileID: 0}
+  berry: {fileID: 7430245421728869728, guid: 17de4742858a9324fab32373bc0346d4, type: 3}
   fire: {fileID: 5980049068474926190, guid: 7ca47b43006b50548bd1731c25e55de6, type: 3}
-  spray: {fileID: 0}
+  spray: {fileID: 7858892443416566777, guid: 1d403f646bd18c54d8dae949db2762bb, type: 3}
   current: {fileID: 0}
   rend: {fileID: 2927892218187392724}

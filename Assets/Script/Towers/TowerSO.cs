@@ -5,6 +5,7 @@ using UnityEngine;
 public class TowerSO : ScriptableObject
 {
     public float range1, range2, range3;
+    public float coneAngle;
     public float damage1, damage2, damage3;
     public float attackspeed;
     public float cooldownTime;

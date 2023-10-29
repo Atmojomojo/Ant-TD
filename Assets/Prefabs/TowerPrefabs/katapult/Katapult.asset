@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c4894de884e271498336e79eea13418, type: 3}
-  m_Name: Fire
+  m_Name: Katapult
   m_EditorClassIdentifier: 
-  range1: 4
-  range2: 6
-  range3: 7
+  range1: 8
+  range2: 12
+  range3: 14
   coneAngle: 45
-  damage1: 1
-  damage2: 1.5
-  damage3: 2
-  attackspeed: 1
-  cooldownTime: 1
-  cost: 400
+  damage1: 4
+  damage2: 6
+  damage3: 8
+  attackspeed: 2
+  cooldownTime: 0
+  cost: 300
   upCost2: 500
-  upCost3: 600
+  upCost3: 700
