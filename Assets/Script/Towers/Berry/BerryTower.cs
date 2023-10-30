@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class BerryTower : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Attack(GameObject target)
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
