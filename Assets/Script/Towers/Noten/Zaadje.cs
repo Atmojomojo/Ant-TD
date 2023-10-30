@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Zaadje : MonoBehaviour
 {
-    public float bulletSpeed, gravity;
-    public float damage;
+    public float bulletSpeed = 16, gravity = 0.5f;
+    public float damage =0.2f;
     private Rigidbody rb;
 
     void Start()
