@@ -14686,10 +14686,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 943030026}
-        m_TargetAssemblyTypeName: LoadingScene, Assembly-CSharp
+      - m_Target: {fileID: 943030032}
+        m_TargetAssemblyTypeName: ReloadScene, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 3
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -15844,6 +15844,7 @@ GameObject:
   - component: {fileID: 943030023}
   - component: {fileID: 943030030}
   - component: {fileID: 943030031}
+  - component: {fileID: 943030032}
   m_Layer: 0
   m_Name: All Scripts UI
   m_TagString: Untagged
@@ -15976,6 +15977,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 2137409461}
   interactionPanel: {fileID: 2137409461}
+--- !u!114 &943030032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943030022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c58538d9bbb4d9148bfa9ce79c586342, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Loadingscreen: {fileID: 4157099308818868495}
+  LoadingBarFill: {fileID: 5200831973735755206}
+  slider: {fileID: 7406702229895153858}
+  loadingScreenDuration: 0.8
 --- !u!4 &946498500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 19822347532878325, guid: 9e5a66f9029bec34ab26dfd122733ee8,
