@@ -7,6 +7,6 @@ public class AddMap : MonoBehaviour
 {
     public void Awake()
     {
-        SceneManager.LoadScene(2, LoadSceneMode.Additive);
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
     }
 }

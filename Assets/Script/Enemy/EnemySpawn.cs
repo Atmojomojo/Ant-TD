@@ -10,6 +10,7 @@ public class EnemySpawn : MonoBehaviour
     public float timeStamp;
     public int currentWave;
     public bool infinite = false;
+    public List<GameObject> enemies = new List<GameObject>();
     // Update is called once per frame
     void Update()
     {
@@ -17,7 +18,7 @@ public class EnemySpawn : MonoBehaviour
         {
             if (Time.time > timeStamp)
             {
-                Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, gameObject.transform.rotation);
+                enemies.Add(Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, gameObject.transform.rotation));
                 numberSend += 1;
                 timeStamp = Time.time + wave.enemyType[currentWave].interval;
             }

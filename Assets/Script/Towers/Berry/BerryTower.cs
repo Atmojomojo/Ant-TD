@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class BerryTower : MonoBehaviour
 {
-    public void Attack(GameObject target)
+    public ManualTower manualTower;
+    public GameObject bullet;
+    public Animator animator;
+    public Transform attackPoint;
+    public void Attack()
     {
-
+        animator.SetTrigger("Attack");
+        Instantiate(bullet, attackPoint.position, attackPoint.rotation);
     }
 }

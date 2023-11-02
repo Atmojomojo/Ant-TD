@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class ManualTower : MonoBehaviour
 {
@@ -13,7 +14,8 @@ public class ManualTower : MonoBehaviour
     public Transform attackPoint; // Set the attack point in the Inspector
     public FireTower fireTower;
     public SprayTower sprayTower;
-
+    public BerryTower berryTower;
+    public GameObject berryTarget;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +60,14 @@ public class ManualTower : MonoBehaviour
         // Check for enemies in range and attack them
         if (Time.time - lastAttackTime >= towerSO.attackspeed)
         {
+            berryTarget = GetClosestEnemy();
+            if (berryTarget != null)
+            {
+                if (berryTower != null)
+                {
+                    berryTower.Attack();
+                }
+            }
             List<GameObject> targetsInRange = GetEnemiesInRange();
             if (targetsInRange.Count == 0)
             {
@@ -83,8 +93,9 @@ public class ManualTower : MonoBehaviour
                         sprayTower.Attack(target);
                     }
                 }
+                
             }
-          
+
             lastAttackTime = Time.time; // Update the last attack time
         }
     }
@@ -137,5 +148,33 @@ public class ManualTower : MonoBehaviour
         }
 
         return targetsInRange;
+    }
+    public GameObject GetClosestEnemy()
+    {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        float closestDistance = Mathf.Infinity;
+        GameObject target = null;
+
+        foreach (GameObject go in enemies)
+        {
+            float currentDistance;
+            currentDistance = Vector3.Distance(transform.position, go.transform.position);
+            if (currentDistance < range)
+            {
+                Vector3 toEnemy = go.transform.position - transform.position;
+                float angleToEnemy = Vector3.Angle(transform.forward, toEnemy);
+
+                // Check if the enemy is within the cone angle
+                if (angleToEnemy <= angle / 2.0f)
+                {
+                    if (currentDistance < closestDistance)
+                    {
+                        closestDistance = currentDistance;
+                        target = go;
+                    }
+                }
+            }
+        }
+        return target;
     }
 }
