@@ -21,10 +21,7 @@ public class PopupController : MonoBehaviour
 
     private void Start()
     {
-        
-        Invoke("ShowInteraction", 5f);
-       
-
+        Debug.Log(SceneManager.GetActiveScene().name);
         if (SceneManager.GetActiveScene().name == targetSceneName)
         {
             Invoke("ShowInteraction", 5f);
