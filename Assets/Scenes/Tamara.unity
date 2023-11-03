@@ -1731,7 +1731,7 @@ MonoBehaviour:
   Loadingscreen: {fileID: 1930905295}
   LoadingBarFill: {fileID: 830901087}
   slider: {fileID: 566656053}
-  loadingScreenDuration: 0.8
+  loadingScreenDuration: 0.5
 --- !u!4 &450201928
 Transform:
   m_ObjectHideFlags: 0
