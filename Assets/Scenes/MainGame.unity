@@ -15977,6 +15977,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 2137409461}
   interactionPanel: {fileID: 2137409461}
+  targetSceneName: Map
 --- !u!114 &943030032
 MonoBehaviour:
   m_ObjectHideFlags: 0
