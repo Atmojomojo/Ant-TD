@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 using UnityEngine.UI;
 using UnityEngine.Profiling;
 using UnityEngine.Rendering;
-using UnityEngine.Rendering.HighDefinition;
+//using UnityEngine.Rendering.HighDefinition;
 
 public class TimePause : MonoBehaviour
 {
