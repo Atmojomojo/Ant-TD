@@ -511,6 +511,7 @@ MonoBehaviour:
   fireTicks: 0
   fireDamage: 0
   fireTickCooldown: 1
+  sprayTimeStamp: 0
 --- !u!65 &7419029592670251880
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -530,8 +531,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 0.4, z: 1}
-  m_Center: {x: 0, y: 0.2, z: 0}
+  m_Size: {x: 1, y: 0.53441536, z: 1}
+  m_Center: {x: 0, y: 0.26720768, z: 0}
 --- !u!195 &6398861597343205481
 NavMeshAgent:
   m_ObjectHideFlags: 0

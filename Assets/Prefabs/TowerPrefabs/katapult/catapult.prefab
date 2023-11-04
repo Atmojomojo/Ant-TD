@@ -1,5 +1,67 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1905914728022222052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8242216078639034230}
+  m_Layer: 0
+  m_Name: arc
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8242216078639034230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905914728022222052}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 9.43, z: 1.93}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7806524261860866010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &8316288635481368505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3765884257890270103}
+  m_Layer: 0
+  m_Name: Shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3765884257890270103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8316288635481368505}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.7319, z: -1.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7806524261860866010}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &7772334489599086641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -68,6 +130,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: catapult
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 21584cccf6144de4c997bb1369e54372,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 5e9892dbb59f5bf438bf6e0dd735f864, type: 2}
     - target: {fileID: 6378358387506287701, guid: 21584cccf6144de4c997bb1369e54372,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -86,7 +153,15 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: -4390175819261874455, guid: 21584cccf6144de4c997bb1369e54372, type: 3}
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21584cccf6144de4c997bb1369e54372,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 3765884257890270103}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21584cccf6144de4c997bb1369e54372,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8242216078639034230}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 21584cccf6144de4c997bb1369e54372,
         type: 3}
@@ -105,6 +180,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: -5818397106894158600}
   m_SourcePrefab: {fileID: 100100000, guid: 21584cccf6144de4c997bb1369e54372, type: 3}
+--- !u!95 &4230697130837323168 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 21584cccf6144de4c997bb1369e54372,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772334489599086641}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7430245421728869728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 21584cccf6144de4c997bb1369e54372,
@@ -132,6 +213,8 @@ MonoBehaviour:
   attackPoint: {fileID: 0}
   fireTower: {fileID: 0}
   sprayTower: {fileID: 0}
+  berryTower: {fileID: -5818397106894158600}
+  berryTarget: {fileID: 0}
 --- !u!114 &1910338719770161625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,3 +269,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5db14e92beee58047bdddbd523e9067b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manualTower: {fileID: 6267170483942729259}
+  bullet: {fileID: 61878868063414605, guid: 8c44217f67c49bf479937201c574686c, type: 3}
+  animator: {fileID: 4230697130837323168}
+  attackPoint: {fileID: 3765884257890270103}
+  bulletShot: {fileID: 0}
+  arc: {fileID: 1905914728022222052}
+--- !u!4 &7806524261860866010 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21584cccf6144de4c997bb1369e54372,
+    type: 3}
+  m_PrefabInstance: {fileID: 7772334489599086641}
+  m_PrefabAsset: {fileID: 0}

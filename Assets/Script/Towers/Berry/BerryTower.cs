@@ -8,9 +8,13 @@ public class BerryTower : MonoBehaviour
     public GameObject bullet;
     public Animator animator;
     public Transform attackPoint;
-    public void Attack()
+    public GameObject bulletShot;
+    public GameObject arc;
+    public void Attack(GameObject target, float damage)
     {
         animator.SetTrigger("Attack");
-        Instantiate(bullet, attackPoint.position, attackPoint.rotation);
+        bulletShot = Instantiate(bullet, attackPoint.position, attackPoint.rotation);
+        bulletShot.GetComponent<Berry>().Shoot(target, damage, arc);
     }
+
 }

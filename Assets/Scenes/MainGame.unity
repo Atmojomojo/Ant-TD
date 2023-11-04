@@ -11644,6 +11644,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6729147835557862333, guid: 4d711ce8bc7041847a13d57096ad77f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8391329482566276922, guid: 4d711ce8bc7041847a13d57096ad77f5,
         type: 3}
       propertyPath: m_Name
@@ -14859,6 +14864,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6729147835557862333, guid: 4d711ce8bc7041847a13d57096ad77f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8391329482566276922, guid: 4d711ce8bc7041847a13d57096ad77f5,
         type: 3}
       propertyPath: m_Name
@@ -16459,11 +16469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2aee95b3489fb446946bf176d60e483, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideDelay1InSeconds: 5
-  showDelayInSeconds: 10
-  hideDelay2InSeconds: 15
-  MountedTurretShootUI: {fileID: 249879000}
-  MountedTurretLeaveUI: {fileID: 72945410}
 --- !u!4 &946498500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 19822347532878325, guid: 9e5a66f9029bec34ab26dfd122733ee8,
@@ -21212,6 +21217,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6729147835557862333, guid: 4d711ce8bc7041847a13d57096ad77f5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6729147835557862333, guid: 4d711ce8bc7041847a13d57096ad77f5,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8391329482566276922, guid: 4d711ce8bc7041847a13d57096ad77f5,
         type: 3}
       propertyPath: m_Name
@@ -24519,6 +24534,11 @@ PrefabInstance:
       value: DefendPoint
       objectReference: {fileID: 0}
     - target: {fileID: 7001846787437117741, guid: 3dfe73ee7043e0445a62d3fed031941a,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7669349338213621815, guid: 3dfe73ee7043e0445a62d3fed031941a,
         type: 3}
       propertyPath: m_Enabled
       value: 0

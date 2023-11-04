@@ -4,54 +4,49 @@ using UnityEngine;
 
 public class Berry : MonoBehaviour
 {
-    public EnemySpawn enemySpawn;
     public float bulletSpeed;
     public float damage;
     private Rigidbody rb;
-    public GameObject splash;
+    public GameObject splash, lastSplash;
 
-    public Transform target;
-    public Transform arc1, arc2, arc3;
+    public GameObject enemyTarget;
+    public GameObject target;
+    public GameObject arc;
+
     void Start()
     {
-        
         rb = GetComponent<Rigidbody>();
+        target = enemyTarget;
+    }
+
+    public void Shoot(GameObject target, float damage, GameObject arc)
+    {
+        enemyTarget = target;
+        this.damage = damage;
+        this.arc = arc;
+    }
+    public void Update()
+    {
+        if (target == arc)
+        {
+            if (Vector3.Distance(transform.position, arc.transform.position) < 2)
+            {
+                target = enemyTarget;
+            }
+        }
+        transform.LookAt(target.transform);
         rb.velocity = transform.forward * bulletSpeed; // Set the initial forward velocity
     }
 
-    public void Update()
-    {
-        gameObject.transform.LookAt(target);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.transform.name == "arc1")
-        {
-            target = arc2;
-        }
-        if (other.transform.name == "arc2")
-        {
-            target = arc3;
-        }
-        if (other.transform.name == "arc3")
-        {
-            target = enemySpawn.enemies[0].transform;
-        }
-    }
+    
     void OnCollisionEnter(Collision collision)
     {
        
         if (collision.transform.CompareTag("Enemy"))
         {
             EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
-            Instantiate(splash, transform.position, Quaternion.identity);
-            if (enemy != null)
-            {
-                enemy.health -= damage;
-                enemy.hitParticle.Play();
-                print("Enemy Hit with noot. It did " + damage + " Damage");
-            }
+            lastSplash = Instantiate(splash, transform.position, Quaternion.identity);
+            lastSplash.GetComponent<SplashDamage>().damage = damage;
         }
         Destroy(gameObject);
     }

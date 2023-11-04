@@ -65,7 +65,7 @@ public class ManualTower : MonoBehaviour
             {
                 if (berryTower != null)
                 {
-                    berryTower.Attack();
+                    berryTower.Attack(berryTarget, damage);
                 }
             }
             List<GameObject> targetsInRange = GetEnemiesInRange();
