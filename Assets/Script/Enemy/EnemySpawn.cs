@@ -10,6 +10,7 @@ public class EnemySpawn : MonoBehaviour
     public float timeStamp;
     public int currentWave;
     public bool infinite = false;
+    private bool lastWaveSend;
     public List<GameObject> enemies = new List<GameObject>();
     // Update is called once per frame
     void Update()
@@ -40,7 +41,18 @@ public class EnemySpawn : MonoBehaviour
         {
             if (wave.enemyType.Length == currentWave)
             {
-                //
+                timeStamp = Time.time + 9999999999999999999;
+                lastWaveSend = true;
+                currentWave = 0;
+               
+            }
+        }
+        if (lastWaveSend == true)
+        {
+            if (enemies.Count == 0)
+            {
+                // win screen
+                print("Game won");
             }
         }
     }

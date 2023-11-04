@@ -152,7 +152,6 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
             }
             if (turretCanvas.GetComponent<Canvas>().enabled == true)
             {
-                print("test");
                 current = null;
             }
         }

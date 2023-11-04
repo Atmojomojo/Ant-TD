@@ -6,6 +6,7 @@ using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
+    public EnemySpawn enemySpawn;
     public Currency currency;
     public NavMeshAgent agent;
     public GameObject defendPoint;
@@ -30,6 +31,7 @@ public class EnemyAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        enemySpawn = GameObject.FindAnyObjectByType<EnemySpawn>();
         currency = GameObject.FindAnyObjectByType<Currency>();
         defendPoint = GameObject.Find("DefendPoint");
         agent.SetDestination(defendPoint.transform.position);
@@ -70,11 +72,13 @@ public class EnemyAI : MonoBehaviour
                 currency.currency += worth;
                 currency.currency += interestBonus + interestBonus + interestBonus + interestBonus + interestBonus;
             }
+            enemySpawn.enemies.Remove(gameObject);
             Destroy(gameObject);
             Instantiate(deadParticle, transform.position, transform.rotation);
         }
         if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
         {
+            enemySpawn.enemies.Remove(gameObject);
             playerHealth.health -= damage;
             Destroy(gameObject);
         }

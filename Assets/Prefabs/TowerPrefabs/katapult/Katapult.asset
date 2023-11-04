@@ -16,9 +16,9 @@ MonoBehaviour:
   range2: 12
   range3: 14
   coneAngle: 60
-  damage1: 4
-  damage2: 6
-  damage3: 8
+  damage1: 3
+  damage2: 5
+  damage3: 7
   attackspeed: 2
   cooldownTime: 0
   cost: 300

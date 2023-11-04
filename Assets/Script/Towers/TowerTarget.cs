@@ -51,7 +51,6 @@ public class TowerTarget : MonoBehaviour
                 animator.SetTrigger("Attack");
                 bulletShot = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                 bulletShot.GetComponent<Noot>().damage = damage;
-                Debug.Log("Shoot");
                 timeStamp = Time.time + towerSO.attackspeed;
             }
         }

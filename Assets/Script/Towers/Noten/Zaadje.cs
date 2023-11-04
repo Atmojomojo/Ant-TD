@@ -11,7 +11,7 @@ public class Zaadje : MonoBehaviour
     void Start()
     {
         bulletSpeed = 16;
-        gravity = 0.5f;
+        gravity = 0.2f;
         damage = 0.2f;
         rb = GetComponent<Rigidbody>();
         rb.velocity = -transform.up * bulletSpeed; // Set the initial forward velocity

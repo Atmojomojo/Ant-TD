@@ -146,7 +146,6 @@ public class UpgradeTower : MonoBehaviour
                 {
                     currency.currency -= towerTargetScript.towerSO.upCost2;
                     towerTargetScript.towerLevel = 2;
-                    print("test");
                 }
             }
             else
@@ -155,7 +154,6 @@ public class UpgradeTower : MonoBehaviour
                 {
                     currency.currency -= towerTargetScript.towerSO.upCost3;
                     towerTargetScript.towerLevel = 3;
-                    print("test");
                 }
             }
         }
@@ -168,7 +166,6 @@ public class UpgradeTower : MonoBehaviour
                     coneProjector.transform.position = selectedTower.transform.position + selectedTower.transform.forward * manualTowerScript.towerSO.range2 / 2;
                     currency.currency -= manualTowerScript.towerSO.upCost2;
                     manualTowerScript.towerLevel = 2;
-                    print("test");
                 }
             }
             else
@@ -178,7 +175,6 @@ public class UpgradeTower : MonoBehaviour
                     coneProjector.transform.position = selectedTower.transform.position + selectedTower.transform.forward * manualTowerScript.towerSO.range3 / 2;
                     currency.currency -= manualTowerScript.towerSO.upCost3;
                     manualTowerScript.towerLevel = 3;
-                    print("test");
                 }
             }
         }

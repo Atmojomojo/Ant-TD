@@ -43,7 +43,6 @@ public class TurretSwitch : MonoBehaviour
             turretActive = true;
 
             inGameUI.SetActive(true);
-            Debug.Log("MountedturretShootUI");
             MountedturretShootUI.SetActive(true);
 
             if (!hasEnteredTurret)

@@ -34,7 +34,10 @@ public class Berry : MonoBehaviour
                 target = enemyTarget;
             }
         }
-        transform.LookAt(target.transform);
+        if (target != null)
+        {
+            transform.LookAt(target.transform);
+        }
         rb.velocity = transform.forward * bulletSpeed; // Set the initial forward velocity
     }
 
