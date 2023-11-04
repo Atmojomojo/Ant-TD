@@ -12,8 +12,6 @@ public class Audio : MonoBehaviour
     public AudioMixer music;
     public AudioMixer sfx;
     public AudioMixer allsounds;
-    
-  
 
     void Start()
     {
@@ -31,23 +29,25 @@ public class Audio : MonoBehaviour
         {
             PlayerPrefs.SetFloat("allsoundsVolume", 0.8f);
         }
+
         Load();
     }
 
     public void SetSFXSlider(float newVolume)
     {
-        sfx.SetFloat("Volume", Mathf.Log10(newVolume) * 20);
+        sfx.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
         PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
     }
 
     public void SetMusicSlider(float newVolume)
     {
-        music.SetFloat("Volume", Mathf.Log10(newVolume) * 20);
+        music.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
     }
+
     public void SetallsoundsSlider(float newVolume)
     {
-        allsounds.SetFloat("Volume", Mathf.Log10(newVolume) * 20);
+        allsounds.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
         PlayerPrefs.SetFloat("allsoundsVolume", allsoundsSlider.value);
     }
 
@@ -56,7 +56,5 @@ public class Audio : MonoBehaviour
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         allsoundsSlider.value = PlayerPrefs.GetFloat("allsoundsVolume");
-        Debug.Log(PlayerPrefs.GetFloat("Volume"));
-
     }
 }
