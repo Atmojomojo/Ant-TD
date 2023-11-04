@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &519849719712103948
 Transform:
@@ -55,6 +55,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
@@ -140,6 +150,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -224,6 +244,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -302,6 +332,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
@@ -387,6 +427,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -460,6 +510,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
@@ -550,6 +610,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -633,6 +703,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
@@ -718,6 +798,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -801,6 +891,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
@@ -886,6 +986,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Antegg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -959,6 +1069,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Antegg (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1516870686013643646, guid: 142b6d20846083444ace10cdbf85802f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     - target: {fileID: 2181661377209008580, guid: 142b6d20846083444ace10cdbf85802f,
         type: 3}

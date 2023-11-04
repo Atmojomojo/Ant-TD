@@ -83,6 +83,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ecf09f94665413c4ea21ee326b2126ed, type: 2}
+    - target: {fileID: -3311743450573447396, guid: 9e99fe060d017b84eabebadd36e55a99,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -3311743450573447396, guid: 9e99fe060d017b84eabebadd36e55a99,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
+      objectReference: {fileID: 0}
     - target: {fileID: -819666450844396698, guid: 9e99fe060d017b84eabebadd36e55a99,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -92,6 +102,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: shep
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e99fe060d017b84eabebadd36e55a99,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616829524128871278, guid: 9e99fe060d017b84eabebadd36e55a99,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4616829524128871278, guid: 9e99fe060d017b84eabebadd36e55a99,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 119
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
