@@ -64542,7 +64542,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 53270145}
         m_TargetAssemblyTypeName: ResolutionBar, Assembly-CSharp
         m_MethodName: SetRes
         m_Mode: 1
