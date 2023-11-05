@@ -12,6 +12,7 @@ public class EnemySpawn : MonoBehaviour
     public bool infinite = false;
     private bool lastWaveSend;
     public List<GameObject> enemies = new List<GameObject>();
+    public GameObject winScreen;
     // Update is called once per frame
     void Update()
     {
@@ -51,8 +52,8 @@ public class EnemySpawn : MonoBehaviour
         {
             if (enemies.Count == 0)
             {
-                // win screen
-                print("Game won");
+                winScreen.SetActive(true);
+                Debug.Log("You've won");
             }
         }
     }

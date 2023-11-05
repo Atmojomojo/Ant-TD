@@ -69241,6 +69241,7 @@ MonoBehaviour:
   currentWave: 0
   infinite: 0
   enemies: []
+  winScreen: {fileID: 120071664}
 --- !u!1001 &1335911059
 PrefabInstance:
   m_ObjectHideFlags: 0
