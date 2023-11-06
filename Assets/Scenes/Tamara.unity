@@ -6126,6 +6126,16 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 450201929}
+    - target: {fileID: 1039199125663459744, guid: 6461c46ed76075f41a4c02890a1b1b72,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetallsoundsSlider
+      objectReference: {fileID: 0}
+    - target: {fileID: 1039199125663459744, guid: 6461c46ed76075f41a4c02890a1b1b72,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Audio, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 1050543231491262792, guid: 6461c46ed76075f41a4c02890a1b1b72,
         type: 3}
       propertyPath: m_AnchorMax.y

@@ -17,8 +17,9 @@ public class TurretSwitch : MonoBehaviour
     
 
     public GameObject inGameUI;
-    public GameObject MountedturretShootUI;
-    public GameObject MountedturretLeaveUI;
+    public GameObject mountedTurretShootUI;
+    public GameObject mountedTurretLeaveUI;
+    public GameObject popupUI;
     public string targetSceneName = "Map";
 
 
@@ -45,7 +46,12 @@ public class TurretSwitch : MonoBehaviour
 
             inGameUI.SetActive(true); // Crosshair aan
 
-           
+            if (popupUI != null && popupUI.activeSelf)
+            {
+                HidePopup();
+            }
+
+
         }
         else
         {
@@ -60,7 +66,12 @@ public class TurretSwitch : MonoBehaviour
 
             
             inGameUI.SetActive(false);
-            MountedturretLeaveUI.SetActive(false);
+            mountedTurretLeaveUI.SetActive(false);
+
+            if (popupUI != null && popupUI.activeSelf)
+            {
+                HidePopup();
+            }
 
         }
     }
@@ -70,22 +81,28 @@ public class TurretSwitch : MonoBehaviour
         Debug.Log(SceneManager.GetActiveScene().name);
         if (SceneManager.GetActiveScene().name == targetSceneName)
         {
-            MountedturretShootUI.SetActive(true); // Uitleg aan
+            yield return new WaitForSeconds(1f);
+
+            mountedTurretShootUI.SetActive(true); // Uitleg aan
 
             yield return new WaitForSeconds(2f); // Wacht 2 seconden
 
-            MountedturretShootUI.SetActive(false); // Uitleg uit
+            mountedTurretShootUI.SetActive(false); // Uitleg uit
 
             yield return new WaitForSeconds(2f); // Wacht 2 seconden
 
-            MountedturretLeaveUI.SetActive(true); // Uitleg 2 aan
+            mountedTurretLeaveUI.SetActive(true); // Uitleg 2 aan
 
             yield return new WaitForSeconds(5f); // Wacht 5 seconden
 
-            MountedturretLeaveUI.SetActive(false); // Uitelg 2 uit
+            mountedTurretLeaveUI.SetActive(false); // Uitelg 2 uit
         }
         tutorialHappend = true;
         yield break;
+    }
+    private void HidePopup()
+    {
+         popupUI.SetActive(false);
     }
 }
 
