@@ -66784,6 +66784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916eb53d9b2500a449e9b015f5dd3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialHappend: 0
   turretActive: 0
   playerInput: {fileID: 1295995557}
   main: {fileID: 1328957264}
@@ -66793,9 +66794,7 @@ MonoBehaviour:
   inGameUI: {fileID: 132386126}
   MountedturretShootUI: {fileID: 685047326}
   MountedturretLeaveUI: {fileID: 1156976555}
-  hideShootUIDelayInSeconds: 4
-  showLeaveUIDelayInSeconds: 4
-  hideLeaveUIDelayInSeconds: 4
+  targetSceneName: Map
 --- !u!114 &1295995559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102653,7 +102652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b75cb9cb44e4f0542a50ad2cb2c76b65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensitivity: 1
+  sensitivity: 0.1
   rotatepoint: {fileID: 1737152027}
 --- !u!1001 &2008686330
 PrefabInstance:
