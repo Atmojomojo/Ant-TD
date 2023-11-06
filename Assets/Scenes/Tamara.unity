@@ -1345,7 +1345,7 @@ AudioSource:
   m_GameObject: {fileID: 262606809}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 967c948287cd1d941bf758a2fc0e0adc,
+  OutputAudioMixerGroup: {fileID: 4338718034041873893, guid: be6ef8b158dc0684eb53e772783ed250,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 03e032cf5595ec245990c0747b9f89b9, type: 3}
   m_PlayOnAwake: 1
@@ -1670,8 +1670,6 @@ GameObject:
   - component: {fileID: 450201923}
   - component: {fileID: 450201929}
   - component: {fileID: 450201930}
-  - component: {fileID: 450201932}
-  - component: {fileID: 450201931}
   m_Layer: 0
   m_Name: All scripts
   m_TagString: Untagged
@@ -1762,9 +1760,9 @@ MonoBehaviour:
   musicSlider: {fileID: 400046307}
   sfxSlider: {fileID: 1287637521}
   allsoundsSlider: {fileID: 1244796121}
-  music: {fileID: 24100000, guid: 967c948287cd1d941bf758a2fc0e0adc, type: 2}
-  sfx: {fileID: 24100000, guid: 346ec5ebe40496b4d866897691e48ac8, type: 2}
-  allsounds: {fileID: 24100000, guid: e1ffef298d196244aa5f8a8a655ac9df, type: 2}
+  music: {fileID: 4338718034041873893, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
+  sfx: {fileID: 6216537257225739402, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
+  allsounds: {fileID: 24100000, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
 --- !u!114 &450201930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1777,34 +1775,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 130a57f363538ee49a2b32468bc7f40f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &450201931
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450201922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64369a6373a401c4bb8f252d103e6802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profile: {fileID: 0}
---- !u!114 &450201932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 450201922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10e933c20bf28324090cb4aab12d71e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  popupPanel: {fileID: 0}
-  interactionPanel: {fileID: 0}
-  targetSceneName: Map
 --- !u!1 &474773743
 GameObject:
   m_ObjectHideFlags: 0
@@ -4629,7 +4599,7 @@ AudioSource:
   m_GameObject: {fileID: 1766518048}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 967c948287cd1d941bf758a2fc0e0adc,
+  OutputAudioMixerGroup: {fileID: 4338718034041873893, guid: be6ef8b158dc0684eb53e772783ed250,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 7454ad851d995be4f8e4f20fed34f1b8, type: 3}
   m_PlayOnAwake: 1
@@ -6351,6 +6321,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 450201929}
+    - target: {fileID: 8160398221883274770, guid: 6461c46ed76075f41a4c02890a1b1b72,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8227311119506398036, guid: 6461c46ed76075f41a4c02890a1b1b72,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -7154,7 +7129,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 450201931}
+      objectReference: {fileID: 0}
     - target: {fileID: 4324378431277346916, guid: 9cb43017579893040881c3bbcf71a9d6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
@@ -7299,7 +7274,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
-      objectReference: {fileID: 450201931}
+      objectReference: {fileID: 0}
     - target: {fileID: 5057175705926890889, guid: 9cb43017579893040881c3bbcf71a9d6,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
