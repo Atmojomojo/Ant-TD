@@ -8,25 +8,21 @@ using UnityEngine.SceneManagement;
 
 public class TurretSwitch : MonoBehaviour
 {
+    public bool tutorialHappend;
     public bool turretActive = false;
     public PlayerInput playerInput;
     public Camera main, turret;
     public MountedTurret mountedTurret;
     public MountedTurretShoot shoot;
-
-
+    
 
     public GameObject inGameUI;
     public GameObject MountedturretShootUI;
     public GameObject MountedturretLeaveUI;
+    public string targetSceneName = "Map";
 
 
-    public float hideShootUIDelayInSeconds = 4f;
-    public float showLeaveUIDelayInSeconds = 6f;
-    public float hideLeaveUIDelayInSeconds = 3f;
-
-    private bool isShootUIHidden = false;
-    private bool hasEnteredTurret = false;
+    private bool hasSeenUI = false;
 
 
     public void SwitchToTurret()
@@ -41,26 +37,15 @@ public class TurretSwitch : MonoBehaviour
             playerInput.defaultActionMap = "MountedTurret";
             playerInput.camera = turret;
             turretActive = true;
-
-            inGameUI.SetActive(true);
-            MountedturretShootUI.SetActive(true);
-
-            if (!hasEnteredTurret)
+            if (tutorialHappend == false)
             {
-                
-                hasEnteredTurret = true;
-
-                if (showLeaveUIDelayInSeconds > 0)
-                {
-                    Invoke("ShowMountedturretLeaveUI", showLeaveUIDelayInSeconds);
-                }
+                StartCoroutine(SwitchToTurretIE());
             }
 
-            if (hideShootUIDelayInSeconds > 0)
-            {
-                Invoke("HideMountedturretShootUI", hideShootUIDelayInSeconds);
-                
-            }
+
+            inGameUI.SetActive(true); // Crosshair aan
+
+           
         }
         else
         {
@@ -75,46 +60,32 @@ public class TurretSwitch : MonoBehaviour
 
             
             inGameUI.SetActive(false);
-            MountedturretShootUI.SetActive(false);
             MountedturretLeaveUI.SetActive(false);
 
-            if (hideLeaveUIDelayInSeconds > 0)
-            {
-                CancelInvoke("ShowMountedturretLeaveUI");
-                Invoke("HideMountedturretLeaveUI", hideLeaveUIDelayInSeconds);
-            }
-
-            
-            hasEnteredTurret = false;
-            
-
         }
-
     }
-    void HideMountedturretShootUI()
+    public IEnumerator SwitchToTurretIE()
     {
-        MountedturretShootUI.SetActive(false);
-        isShootUIHidden = true;
 
-        if (showLeaveUIDelayInSeconds > 0)
+        Debug.Log(SceneManager.GetActiveScene().name);
+        if (SceneManager.GetActiveScene().name == targetSceneName)
         {
-            Invoke("ShowMountedturretLeaveUI", showLeaveUIDelayInSeconds);
+            MountedturretShootUI.SetActive(true); // Uitleg aan
+
+            yield return new WaitForSeconds(2f); // Wacht 2 seconden
+
+            MountedturretShootUI.SetActive(false); // Uitleg uit
+
+            yield return new WaitForSeconds(2f); // Wacht 2 seconden
+
+            MountedturretLeaveUI.SetActive(true); // Uitleg 2 aan
+
+            yield return new WaitForSeconds(5f); // Wacht 5 seconden
+
+            MountedturretLeaveUI.SetActive(false); // Uitelg 2 uit
         }
-    }
-
-    void ShowMountedturretLeaveUI()
-    {
-        MountedturretLeaveUI.SetActive(true);
-
-        if (hideLeaveUIDelayInSeconds > 0)
-        {
-            Invoke("HideMountedturretLeaveUI", hideLeaveUIDelayInSeconds);
-        }
-    }
-
-    void HideMountedturretLeaveUI()
-    {
-        MountedturretLeaveUI.SetActive(false);
+        tutorialHappend = true;
+        yield break;
     }
 }
 

@@ -9,9 +9,10 @@ public class Audio : MonoBehaviour
     public Slider musicSlider;
     public Slider sfxSlider;
     public Slider allsoundsSlider;
-    public AudioMixer music;
-    public AudioMixer sfx;
+    public AudioMixerGroup music;
+    public AudioMixerGroup sfx;
     public AudioMixer allsounds;
+    
 
     void Start()
     {
