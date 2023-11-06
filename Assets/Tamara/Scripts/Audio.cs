@@ -36,13 +36,13 @@ public class Audio : MonoBehaviour
 
     public void SetSFXSlider(float newVolume)
     {
-        sfx.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
+        sfx.audioMixer.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
         PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
     }
 
     public void SetMusicSlider(float newVolume)
     {
-        music.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
+        music.audioMixer.SetFloat("Volume", (newVolume == 0) ? -80f : Mathf.Log10(newVolume) * 20);
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
     }
 
