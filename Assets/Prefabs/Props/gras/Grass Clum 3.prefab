@@ -43,6 +43,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4214299976698639098}
     m_Modifications:
+    - target: {fileID: 7820015793496006675, guid: e9cba0b82f178ed4aa2153140ebc2f3d,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612776527910240710, guid: e9cba0b82f178ed4aa2153140ebc2f3d,
         type: 3}
       propertyPath: m_Name
@@ -117,6 +122,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4214299976698639098}
     m_Modifications:
+    - target: {fileID: 7820015793496006675, guid: e9cba0b82f178ed4aa2153140ebc2f3d,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 8612776527910240710, guid: e9cba0b82f178ed4aa2153140ebc2f3d,
         type: 3}
       propertyPath: m_Name
@@ -191,6 +201,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4214299976698639098}
     m_Modifications:
+    - target: {fileID: 965103616720410059, guid: 18ae09c8b8c111b4289cc8743a60443a,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1613485830494434334, guid: 18ae09c8b8c111b4289cc8743a60443a,
         type: 3}
       propertyPath: m_Name
@@ -265,6 +280,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4214299976698639098}
     m_Modifications:
+    - target: {fileID: 965103616720410059, guid: 18ae09c8b8c111b4289cc8743a60443a,
+        type: 3}
+      propertyPath: m_ScaleInLightmap
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1613485830494434334, guid: 18ae09c8b8c111b4289cc8743a60443a,
         type: 3}
       propertyPath: m_Name
