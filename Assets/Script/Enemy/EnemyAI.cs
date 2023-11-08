@@ -72,13 +72,13 @@ public class EnemyAI : MonoBehaviour
                 currency.currency += worth;
                 currency.currency += interestBonus + interestBonus + interestBonus + interestBonus + interestBonus;
             }
-            enemySpawn.enemies.Remove(gameObject);
+            enemySpawn.enemyList.enemies.Remove(gameObject);
             Destroy(gameObject);
             Instantiate(deadParticle, transform.position, transform.rotation);
         }
         if (Vector3.Distance(gameObject.transform.position, defendPoint.transform.position) < 2f)
         {
-            enemySpawn.enemies.Remove(gameObject);
+            enemySpawn.enemyList.enemies.Remove(gameObject);
             playerHealth.health -= damage;
             Destroy(gameObject);
         }

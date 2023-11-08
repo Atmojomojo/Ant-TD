@@ -48,7 +48,7 @@ public class Berry : MonoBehaviour
         if (collision.transform.CompareTag("Enemy"))
         {
             EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
-            lastSplash = Instantiate(splash, transform.position, Quaternion.identity);
+            lastSplash = Instantiate(splash, transform.position, Quaternion.Euler(90,0,0));
             lastSplash.GetComponent<SplashDamage>().damage = damage;
         }
         Destroy(gameObject);

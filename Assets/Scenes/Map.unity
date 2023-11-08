@@ -14359,6 +14359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 286068240}
+  - component: {fileID: 286068241}
   m_Layer: 0
   m_Name: Spawn/Defend
   m_TagString: Untagged
@@ -14383,6 +14384,21 @@ Transform:
   - {fileID: 1333328087}
   m_Father: {fileID: 939955803}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &286068241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286068239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21602252928ab2743bf36a718908e026, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemies: []
+  lastWaveSend: 0
+  winScreen: {fileID: 120071664}
 --- !u!4 &286686804 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -69245,8 +69261,7 @@ MonoBehaviour:
   timeStamp: 0
   currentWave: 0
   infinite: 0
-  enemies: []
-  winScreen: {fileID: 120071664}
+  enemyList: {fileID: 286068241}
 --- !u!1001 &1335911059
 PrefabInstance:
   m_ObjectHideFlags: 0

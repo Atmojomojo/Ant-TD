@@ -11,8 +11,7 @@ public class EnemySpawn : MonoBehaviour
     public int currentWave;
     public bool infinite = false;
     private bool lastWaveSend;
-    public List<GameObject> enemies = new List<GameObject>();
-    public GameObject winScreen;
+    public EnemyList enemyList;
     // Update is called once per frame
     void Update()
     {
@@ -20,7 +19,7 @@ public class EnemySpawn : MonoBehaviour
         {
             if (Time.time > timeStamp)
             {
-                enemies.Add(Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, gameObject.transform.rotation));
+                enemyList.enemies.Add(Instantiate(wave.enemyType[currentWave].enemy, gameObject.transform.position, gameObject.transform.rotation));
                 numberSend += 1;
                 timeStamp = Time.time + wave.enemyType[currentWave].interval;
             }
@@ -50,11 +49,7 @@ public class EnemySpawn : MonoBehaviour
         }
         if (lastWaveSend == true)
         {
-            if (enemies.Count == 0)
-            {
-                winScreen.SetActive(true);
-                Debug.Log("You've won");
-            }
+            enemyList.lastWaveSend = true;
         }
     }
 }
