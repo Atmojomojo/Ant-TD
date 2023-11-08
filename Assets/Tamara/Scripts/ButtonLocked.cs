@@ -3,29 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+
 public class ButtonLocked : MonoBehaviour
 {
     public Button level2;
-    private bool isFirstLevelCompleted = false;
-    
+  
+    public string sceneToCheck = "Map";
+
     void Start()
     {
         level2.interactable = false;
+        CheckIfScenePlayed();
     }
 
-    void Update()
+    void CheckIfScenePlayed()
     {
-         Debug.Log(SceneManager.GetActiveScene().name);
-
-        if (isFirstLevelCompleted)
+        if (PlayerPrefs.HasKey(sceneToCheck + "_played"))
         {
+            Debug.Log(sceneToCheck + " has been played.");
+            // Your logic for when the scene has been played
             level2.interactable = true;
         }
+        else
+        {
+            Debug.Log(sceneToCheck + " has not been played.");
+            // Your logic for when the scene has not been played
+            level2.interactable = false;
+        }
+
+        // Save PlayerPrefs
+        PlayerPrefs.Save();
     }
 
-    public void FirstLevelCompleted()
-    {
-        isFirstLevelCompleted = true;
-    }
 }
+
+
