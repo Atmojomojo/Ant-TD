@@ -13,15 +13,51 @@ MonoBehaviour:
   m_Name: Wave
   m_EditorClassIdentifier: 
   enemyType:
+  - enemy: {fileID: 7415661167035940130, guid: 55742e48779b7e9419219d5398fc0da2, type: 3}
+    numberOfType: 4
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 55742e48779b7e9419219d5398fc0da2, type: 3}
+    numberOfType: 7
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 55742e48779b7e9419219d5398fc0da2, type: 3}
+    numberOfType: 10
+    interval: 1.5
+    intervalTilNextEnemyType: 4
   - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
     numberOfType: 4
     interval: 1.5
     intervalTilNextEnemyType: 4
   - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
+    numberOfType: 7
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
+    numberOfType: 10
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 5492095bad8e9c040b4fca8cb845f0f9, type: 3}
+    numberOfType: 4
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 5492095bad8e9c040b4fca8cb845f0f9, type: 3}
+    numberOfType: 7
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 5492095bad8e9c040b4fca8cb845f0f9, type: 3}
+    numberOfType: 10
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: 5492095bad8e9c040b4fca8cb845f0f9, type: 3}
+    numberOfType: 4
+    interval: 1.5
+    intervalTilNextEnemyType: 4
+  - enemy: {fileID: 7415661167035940130, guid: acb33ee790b895347968437bf5d1fd15, type: 3}
     numberOfType: 2
     interval: 3
     intervalTilNextEnemyType: 4
-  - enemy: {fileID: 7415661167035940130, guid: 582fa12ad0d4214439d9a02cda0e3231, type: 3}
+  - enemy: {fileID: 7415661167035940130, guid: 5492095bad8e9c040b4fca8cb845f0f9, type: 3}
     numberOfType: 4
     interval: 1.5
     intervalTilNextEnemyType: 4
