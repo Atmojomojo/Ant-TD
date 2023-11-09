@@ -80,11 +80,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7065358082416484908, guid: 9e99fe060d017b84eabebadd36e55a99,
         type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: -7065358082416484908, guid: 9e99fe060d017b84eabebadd36e55a99,
-        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: ecf09f94665413c4ea21ee326b2126ed, type: 2}
@@ -97,11 +92,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 119
-      objectReference: {fileID: 0}
-    - target: {fileID: -819666450844396698, guid: 9e99fe060d017b84eabebadd36e55a99,
-        type: 3}
-      propertyPath: m_ScaleInLightmap
-      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: -819666450844396698, guid: 9e99fe060d017b84eabebadd36e55a99,
         type: 3}

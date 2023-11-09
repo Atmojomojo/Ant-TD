@@ -1,15 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class EnemyList : MonoBehaviour
 {
     public List<GameObject> enemies = new List<GameObject>();
     public bool lastWaveSend;
     public GameObject winScreen;
-
-    
 
     // Update is called once per frame
     void Update()
@@ -19,10 +16,7 @@ public class EnemyList : MonoBehaviour
             if (enemies.Count == 0)
             {
                 winScreen.SetActive(true);
-          
             }
         } 
     }
-
 }
-
