@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyList : MonoBehaviour
 {
     public List<GameObject> enemies = new List<GameObject>();
-    public bool lastWaveSend;
+    public bool lastWaveSend, isScreenActive;
     public GameObject winScreen;
 
     // Update is called once per frame
@@ -15,7 +15,11 @@ public class EnemyList : MonoBehaviour
         {
             if (enemies.Count == 0)
             {
-                winScreen.SetActive(true);
+                if (isScreenActive == false)
+                {
+                    winScreen.SetActive(true);
+                    isScreenActive = true;
+                }
             }
         } 
     }

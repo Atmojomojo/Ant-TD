@@ -15,17 +15,17 @@ public class TimePause : MonoBehaviour
     public VolumeProfile profile;
     private DepthOfField dof;
 
+    private void Start()
+    {
+        BlurInGame();
+    }
     public void PauseTime()
     {
         if (!isPaused)
         {
             Time.timeScale = 0;
             isPaused = true;
-            //profile.TryGet<DepthOfField>(out dof);
-            //{
-            //    dof.gaussianStart.value = 0;
-            //    dof.gaussianEnd.value = 0;
-            //}
+   
         }
     }
 
@@ -44,11 +44,7 @@ public class TimePause : MonoBehaviour
         {
             Time.timeScale = 1;
             isPaused = false;
-            //profile.TryGet<DepthOfField>(out dof);
-            //{
-            //    dof.gaussianStart.value = 62;
-            //    dof.gaussianEnd.value = 90;
-            //}
+      
         }
     }
 

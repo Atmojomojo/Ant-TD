@@ -9,7 +9,7 @@ public class MainMenuKakkerlak : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-7,0,0);
+        gameObject.GetComponent<Rigidbody>().velocity = new Vector3(-7,0,7);
     }
 
     public void OnTriggerEnter(Collider other)
