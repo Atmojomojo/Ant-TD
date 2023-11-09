@@ -20,8 +20,8 @@ public class ResolutionBar : MonoBehaviour
         {
             new Resolution(),
             new Resolution(),
-            new Resolution(),
             new Resolution()
+           
          
            
         
@@ -34,8 +34,7 @@ public class ResolutionBar : MonoBehaviour
         resolutions[1].height = 1080;
         resolutions[2].width = 2560;
         resolutions[2].height = 1440;
-        resolutions[3].width = 3840;
-        resolutions[3].height = 2160;
+        
        
 
         resolutionDropdown.ClearOptions();

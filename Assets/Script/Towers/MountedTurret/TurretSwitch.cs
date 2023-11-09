@@ -85,7 +85,7 @@ public class TurretSwitch : MonoBehaviour
 
             mountedTurretShootUI.SetActive(true); // Uitleg aan
 
-            yield return new WaitForSeconds(2f); // Wacht 2 seconden
+            yield return new WaitForSeconds(3f); // Wacht 3 seconden
 
             mountedTurretShootUI.SetActive(false); // Uitleg uit
 
@@ -93,7 +93,7 @@ public class TurretSwitch : MonoBehaviour
 
             mountedTurretLeaveUI.SetActive(true); // Uitleg 2 aan
 
-            yield return new WaitForSeconds(5f); // Wacht 5 seconden
+            yield return new WaitForSeconds(3f); // Wacht 3 seconden
 
             mountedTurretLeaveUI.SetActive(false); // Uitelg 2 uit
         }
