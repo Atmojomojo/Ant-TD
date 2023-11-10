@@ -14,6 +14,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public GameObject turretCanvas;
     public GameObject turret;
     public GameObject projector, coneProjector;
+    public GameObject sfx;
 
     // b staat voor buildmode
     public GameObject bNut, bBerry, bFire, bSpray, bCurrent, bPlaced;
@@ -101,7 +102,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                     {
                         if (current.GetComponent<TowerTarget>().towerSO.cost <= currency.currency)
                         {
-
+                            Instantiate(sfx,transform.position, transform.rotation);
                             turret = Instantiate(current, transform.position, transform.rotation);
                             currency.currency -= current.GetComponent<TowerTarget>().towerSO.cost;
                         }
@@ -110,6 +111,7 @@ public class TowerPlacement : MonoBehaviour, IPointerEnterHandler, IPointerExitH
                     {
                         if (current.GetComponent<ManualTower>().towerSO.cost <= currency.currency)
                         {
+                            Instantiate(sfx, transform.position, transform.rotation);
                             turret = Instantiate(current, transform.position, transform.rotation);
                             currency.currency -= current.GetComponent<ManualTower>().towerSO.cost;
                         }

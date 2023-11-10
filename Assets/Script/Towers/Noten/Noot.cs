@@ -7,7 +7,8 @@ public class Noot: MonoBehaviour
     public float bulletSpeed;
     public float damage;
     private Rigidbody rb;
-
+    public GameObject sfx;
+    public GameObject particle;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -22,7 +23,8 @@ public class Noot: MonoBehaviour
             if (enemy != null)
             {
                 enemy.health -= damage;
-                enemy.hitParticle.Play();
+                Instantiate(sfx, collision.transform.position, collision.transform.rotation);
+                Instantiate(particle, collision.transform.position, collision.transform.rotation);
             }
         }
         Destroy(gameObject);

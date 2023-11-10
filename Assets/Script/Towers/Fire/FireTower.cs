@@ -10,6 +10,7 @@ public class FireTower : MonoBehaviour
     private ParticleSystem.MainModule mainModule, mainModule2;
     private ParticleSystem.EmissionModule emissionMod, emissionMod2;
     public ParticleSystem particleMain, particleAdd;
+    public AudioSource fireSfx;
     public void Start()
     {
         mainModule = particleMain.main;
@@ -35,6 +36,7 @@ public class FireTower : MonoBehaviour
     }
     public void Attack(GameObject target)
     {
+        fireSfx.Play();
         animator.SetTrigger("Attack");
         attackParticle.SetActive(true);
         idleParticle.SetActive(false);
@@ -54,6 +56,7 @@ public class FireTower : MonoBehaviour
 
     public void Idle()
     {
+        fireSfx.Stop();
         idleParticle.SetActive(true);
         attackParticle.SetActive(false);
     }

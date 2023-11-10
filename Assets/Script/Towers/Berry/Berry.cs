@@ -12,6 +12,7 @@ public class Berry : MonoBehaviour
     public GameObject enemyTarget;
     public GameObject target;
     public GameObject arc;
+    public GameObject sfx;
 
     void Start()
     {
@@ -47,6 +48,7 @@ public class Berry : MonoBehaviour
        
         if (collision.transform.CompareTag("Enemy"))
         {
+            Instantiate(sfx, collision.transform.position, collision.transform.rotation);
             EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
             lastSplash = Instantiate(splash, transform.position, Quaternion.Euler(90,0,0));
             lastSplash.GetComponent<SplashDamage>().damage = damage;

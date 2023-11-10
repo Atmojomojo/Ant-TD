@@ -1,5 +1,134 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9042281593473343576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2056118130237244123}
+  - component: {fileID: 3023405132021540212}
+  m_Layer: 0
+  m_Name: SFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2056118130237244123
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042281593473343576}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9263, y: 3.8898888, z: 3.6653442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7375688541925851459}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &3023405132021540212
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9042281593473343576}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 6216537257225739402, guid: be6ef8b158dc0684eb53e772783ed250,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 4ae8251b674648141ba67802836055d9, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.7
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &5274914835960665489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -180,6 +309,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 8327116620782704274}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: e20dfebda7f6b55489b36083e92855fb,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2056118130237244123}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: e20dfebda7f6b55489b36083e92855fb,
         type: 3}
@@ -262,6 +395,8 @@ MonoBehaviour:
   attackPoint: {fileID: 0}
   fireTower: {fileID: 0}
   sprayTower: {fileID: 7818999019332575311}
+  berryTower: {fileID: 0}
+  berryTarget: {fileID: 0}
 --- !u!114 &3551542060622541315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,7 +412,9 @@ MonoBehaviour:
   upgradeTower: {fileID: 0}
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
-  projector: {fileID: 0}
+  circleProjector: {fileID: 0}
+  coneProjector: {fileID: 0}
+  towerRange: {fileID: 0}
   leftui: {fileID: 0}
   rightui: {fileID: 0}
   range: 0
@@ -296,6 +433,10 @@ MonoBehaviour:
   manual: {fileID: 45472598505363952}
   animator: {fileID: 5451454298802216180}
   attackParticle: {fileID: 4476324030820938070}
+  particle: {fileID: 8264160899423413826, guid: 46a4bda9eb0c0b24492ffd383f8f4ca4,
+    type: 3}
+  sfx: {fileID: 614937057087663368, guid: f5dd3191c7b9e534c88db64c2ad4a7ba, type: 3}
+  gasSfx: {fileID: 3023405132021540212}
 --- !u!95 &5451454298802216180
 Animator:
   serializedVersion: 5

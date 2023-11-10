@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 using UnityEngine.UI;
 using UnityEngine.Profiling;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
 //using UnityEngine.Rendering.HighDefinition;
 
 public class TimePause : MonoBehaviour
@@ -17,7 +18,21 @@ public class TimePause : MonoBehaviour
 
     private void Start()
     {
-        BlurInGame();
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if (sceneName == "Tamara")
+        {
+            profile.TryGet<DepthOfField>(out dof);
+            {
+                dof.gaussianStart.value = 40;
+                dof.gaussianEnd.value = 70;
+            }
+        }
+        else
+        {
+            BlurInGame();
+        }
+        
     }
     public void PauseTime()
     {

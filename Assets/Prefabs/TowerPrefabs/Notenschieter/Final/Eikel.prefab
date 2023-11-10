@@ -148,3 +148,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 12
   damage: 0
+  sfx: {fileID: 614937057087663368, guid: f5dd3191c7b9e534c88db64c2ad4a7ba, type: 3}
+  particle: {fileID: 8264160899423413826, guid: 46a4bda9eb0c0b24492ffd383f8f4ca4,
+    type: 3}

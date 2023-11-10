@@ -110,6 +110,7 @@ MonoBehaviour:
   enemyTarget: {fileID: 0}
   target: {fileID: 0}
   arc: {fileID: 0}
+  sfx: {fileID: 614937057087663368, guid: f5dd3191c7b9e534c88db64c2ad4a7ba, type: 3}
 --- !u!54 &-2967221156446455426
 Rigidbody:
   m_ObjectHideFlags: 0

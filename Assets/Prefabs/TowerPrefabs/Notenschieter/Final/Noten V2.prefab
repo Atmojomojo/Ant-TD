@@ -2576,6 +2576,7 @@ MonoBehaviour:
   bulletShot: {fileID: 0}
   shootPoint: {fileID: 8031588630179218447}
   animator: {fileID: 7251910292852217237}
+  sfx: {fileID: 614937057087663368, guid: f2379a31585227f4c81bee710018d35f, type: 3}
 --- !u!114 &2217491135110589365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2591,7 +2592,9 @@ MonoBehaviour:
   upgradeTower: {fileID: 0}
   turretUI: {fileID: 0}
   turretCanvas: {fileID: 0}
-  projector: {fileID: 0}
+  circleProjector: {fileID: 0}
+  coneProjector: {fileID: 0}
+  towerRange: {fileID: 0}
   leftui: {fileID: 0}
   rightui: {fileID: 0}
   range: 0

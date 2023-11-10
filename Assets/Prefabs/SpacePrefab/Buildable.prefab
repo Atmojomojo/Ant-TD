@@ -157,6 +157,8 @@ MonoBehaviour:
   turretCanvas: {fileID: 0}
   turret: {fileID: 0}
   projector: {fileID: 0}
+  coneProjector: {fileID: 0}
+  sfx: {fileID: 614937057087663368, guid: 961fb0f71ea8ecb4f82012779b4cbd9f, type: 3}
   bNut: {fileID: 1865945299105909144, guid: e973826a843403c45af4804d43850da1, type: 3}
   bBerry: {fileID: 7430245421728869728, guid: 6fc93f1047398b64aa0306304f9e21fd, type: 3}
   bFire: {fileID: 5980049068474926190, guid: 5a4033e368ebf184e99dfdbe162fd91f, type: 3}

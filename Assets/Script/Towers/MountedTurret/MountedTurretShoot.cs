@@ -14,6 +14,7 @@ public class MountedTurretShoot : MonoBehaviour
     public float barrelSpeed;
     public bool barrelRotate, isShooting;
     public TurretSwitch turret;
+    public GameObject sfx;
 
     private Vector3 initialLocalRotation;
 
@@ -36,6 +37,7 @@ public class MountedTurretShoot : MonoBehaviour
             {
                 if (Time.time > timeStamp)
                 {
+                    Instantiate(sfx,shootPoint.position, shootPoint.rotation);
                     Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                     barrelRotate = true;
                     rotateTowards = barrel.transform.localRotation * Quaternion.Euler(0, 90, 0);

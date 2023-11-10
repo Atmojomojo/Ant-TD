@@ -275,6 +275,7 @@ MonoBehaviour:
   attackPoint: {fileID: 3765884257890270103}
   bulletShot: {fileID: 0}
   arc: {fileID: 1905914728022222052}
+  sfx: {fileID: 614937057087663368, guid: f2379a31585227f4c81bee710018d35f, type: 3}
 --- !u!4 &7806524261860866010 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 21584cccf6144de4c997bb1369e54372,

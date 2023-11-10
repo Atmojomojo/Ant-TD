@@ -15,6 +15,7 @@ public class TowerTarget : MonoBehaviour
     public GameObject bullet, bulletShot;
     public Transform shootPoint;
     public Animator animator;
+    public GameObject sfx;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +49,7 @@ public class TowerTarget : MonoBehaviour
             rotatePointVer.transform.LookAt(closestEnemy.transform.position);
             if (Time.time > timeStamp)
             {
+                Instantiate(sfx, gameObject.transform.position, gameObject.transform.rotation);
                 animator.SetTrigger("Attack");
                 bulletShot = Instantiate(bullet, shootPoint.position, shootPoint.rotation);
                 bulletShot.GetComponent<Noot>().damage = damage;

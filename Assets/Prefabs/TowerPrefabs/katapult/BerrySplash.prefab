@@ -9803,6 +9803,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 0
   enemies: []
+  particle: {fileID: 8264160899423413826, guid: 46a4bda9eb0c0b24492ffd383f8f4ca4,
+    type: 3}
 --- !u!1 &9061696238005684103
 GameObject:
   m_ObjectHideFlags: 0

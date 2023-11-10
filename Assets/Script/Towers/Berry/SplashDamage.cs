@@ -6,7 +6,7 @@ public class SplashDamage : MonoBehaviour
 {
     public float damage;
     public GameObject[] enemies;
-
+    public GameObject particle;
     public void Start()
     {
         DealDamage();
@@ -20,7 +20,7 @@ public class SplashDamage : MonoBehaviour
             if (currentDistance < 3)
             {
                 go.GetComponent<EnemyAI>().health -= damage;
-                go.GetComponent<EnemyAI>().hitParticle.Play();
+                Instantiate(particle, go.transform.position, go.transform.rotation);
             }
         }
     }

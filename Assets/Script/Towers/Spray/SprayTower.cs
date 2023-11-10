@@ -8,6 +8,9 @@ public class SprayTower : MonoBehaviour
     public Animator animator;
     public GameObject attackParticle;
     private ParticleSystem.MainModule mainModule;
+    public GameObject particle;
+    public GameObject sfx;
+    public AudioSource gasSfx;
 
     public void Start()
     {
@@ -26,10 +29,13 @@ public class SprayTower : MonoBehaviour
     public void Attack(GameObject target)
     {
         animator.SetTrigger("Attack");
+        gasSfx.Play();
         attackParticle.SetActive(true);
         if (Time.time > target.GetComponent<EnemyAI>().sprayTimeStamp)
         {
-            target.GetComponent<EnemyAI>().hitParticle.Play();
+
+            Instantiate(sfx, target.transform.position, target.transform.rotation);
+            Instantiate(particle, target.transform.position, target.transform.rotation);
             target.GetComponent<EnemyAI>().health -= manual.damage;
             target.GetComponent<EnemyAI>().sprayTimeStamp = Time.time + manual.towerSO.cooldownTime;
         }
@@ -37,6 +43,7 @@ public class SprayTower : MonoBehaviour
 
     public void Idle()
     {
+        gasSfx.Stop();
         attackParticle.SetActive(false);
     }
 }

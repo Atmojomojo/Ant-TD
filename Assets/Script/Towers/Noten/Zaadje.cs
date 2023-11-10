@@ -7,6 +7,8 @@ public class Zaadje : MonoBehaviour
     public float bulletSpeed = 16, gravity = 0.5f;
     public float damage =0.2f;
     private Rigidbody rb;
+    public GameObject sfx;
+    public GameObject particle;
 
     void Start()
     {
@@ -30,6 +32,8 @@ public class Zaadje : MonoBehaviour
             EnemyAI enemy = collision.gameObject.GetComponent<EnemyAI>();
             if (enemy != null)
             {
+                Instantiate(particle, collision.transform.position, collision.transform.rotation);
+                Instantiate(sfx, collision.transform.position, collision.transform.rotation);
                 enemy.health -= damage;
                 print("Enemy Hit with noot. It did " + damage + " Damage");
             }
