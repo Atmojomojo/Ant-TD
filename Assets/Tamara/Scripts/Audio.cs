@@ -16,23 +16,6 @@ public class Audio : MonoBehaviour
 
     void Start()
     {
-        //if (!PlayerPrefs.HasKey("musicVolume"))
-        //{
-        //    PlayerPrefs.SetFloat("musicVolume", 0.8f);
-        //}
-
-        //if (!PlayerPrefs.HasKey("sfxVolume"))
-        //{
-        //    PlayerPrefs.SetFloat("sfxVolume", 0.8f);
-        //}
-
-        //if (!PlayerPrefs.HasKey("allsoundsVolume"))
-        //{
-        //    PlayerPrefs.SetFloat("allsoundsVolume", 0.8f);
-        //}
-
-        ////Load();
-        ///
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
         allsoundsSlider.value = PlayerPrefs.GetFloat("allsoundsVolume");

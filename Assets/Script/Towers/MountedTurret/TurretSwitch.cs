@@ -69,7 +69,7 @@ public class TurretSwitch : MonoBehaviour
     }
     public IEnumerator SwitchToTurretIE()
     {
-
+        tutorialHappend = true;
         Debug.Log(SceneManager.GetActiveScene().name);
         if (SceneManager.GetActiveScene().name == targetSceneName)
         {
@@ -89,13 +89,9 @@ public class TurretSwitch : MonoBehaviour
 
             mountedTurretLeaveUI.SetActive(false); // Uitelg 2 uit
         }
-        tutorialHappend = true;
         yield break;
     }
-    private void HidePopup()
-    {
-         popupUI.SetActive(false);
-    }
+
 }
 
 
