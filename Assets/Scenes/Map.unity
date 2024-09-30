@@ -2792,6 +2792,7 @@ GameObject:
   - component: {fileID: 53270143}
   - component: {fileID: 53270142}
   - component: {fileID: 53270141}
+  - component: {fileID: 53270151}
   m_Layer: 0
   m_Name: All Scripts UI
   m_TagString: Untagged
@@ -2855,6 +2856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e933c20bf28324090cb4aab12d71e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popupDisable: 0
   popupPanel: {fileID: 368528058}
   interactionPanel: {fileID: 368528058}
   targetSceneName: Map
@@ -2953,6 +2955,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 442241071}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &53270151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 53270139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0fd54ff5fa577a4f9daf3e735e8b669, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &55563817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67082,6 +67096,7 @@ MonoBehaviour:
   turret: {fileID: 738059603}
   mountedTurret: {fileID: 2008529568}
   shoot: {fileID: 1979530505}
+  popupScript: {fileID: 53270143}
   inGameUI: {fileID: 132386126}
   mountedTurretShootUI: {fileID: 685047326}
   mountedTurretLeaveUI: {fileID: 1156976555}
@@ -87920,6 +87935,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 53270151}
+        m_TargetAssemblyTypeName: Map1Win, Assembly-CSharp
+        m_MethodName: Mapwin
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

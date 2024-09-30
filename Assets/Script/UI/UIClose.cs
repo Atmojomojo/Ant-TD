@@ -35,13 +35,13 @@ public class UIClose : MonoBehaviour
         circle.nutI.SetActive(false);
         circle.sprayI.SetActive(false);
     }
-    private void OnEnable()
-    {
-        action.Enable();
-    }
+    //private void OnEnable()
+    //{
+    //    action.Enable();
+    //}
 
-    private void OnDisable()
-    {
-        action.Disable();
-    }
+    //private void OnDisable()
+    //{
+    //    action.Disable();
+    //}
 }

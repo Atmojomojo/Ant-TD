@@ -4652,6 +4652,7 @@ MonoBehaviour:
   health: 20
   healthText: {fileID: 312919564}
   deathScreen: {fileID: 403486952}
+  isDeathScreen: 0
 --- !u!114 &260013577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4680,18 +4681,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 916eb53d9b2500a449e9b015f5dd3b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialHappend: 0
   turretActive: 0
   playerInput: {fileID: 260013579}
   main: {fileID: 330585545}
   turret: {fileID: 903750313}
   mountedTurret: {fileID: 1397823656}
   shoot: {fileID: 8051326049100783533}
+  popupScript: {fileID: 943030031}
   inGameUI: {fileID: 938867357}
-  MountedturretShootUI: {fileID: 249879000}
-  MountedturretLeaveUI: {fileID: 72945410}
-  hideShootUIDelayInSeconds: 4
-  showLeaveUIDelayInSeconds: 4
-  hideLeaveUIDelayInSeconds: 4
+  mountedTurretShootUI: {fileID: 0}
+  mountedTurretLeaveUI: {fileID: 0}
+  popupUI: {fileID: 0}
+  targetSceneName: Map
 --- !u!114 &260013579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4798,6 +4800,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8393d418-3633-4265-a97d-cda2cb537a08
     m_ActionName: Player/Switch[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 70d46976-79d7-4ce8-9227-83eef58e1413
+    m_ActionName: Player/1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a46b64ac-6aff-47bf-80f0-06ac87111010
+    m_ActionName: Player/2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 35953102-ddc4-4f06-9de8-4dcb82716a3d
+    m_ActionName: Player/3[/Keyboard/3]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 09d8dc67-0e6b-4991-b354-e46d47100ed1
+    m_ActionName: Player/Money[/Keyboard/m]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -5930,6 +5948,8 @@ MonoBehaviour:
   upgradeTower: {fileID: 330585551}
   projector: {fileID: 1659075058}
   coneProjector: {fileID: 868552131}
+  prefab: []
+  circle: {fileID: 0}
 --- !u!114 &330585551
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8453,7 +8473,7 @@ MonoBehaviour:
   timeStamp: 0
   currentWave: 0
   infinite: 1
-  enemies: []
+  enemyList: {fileID: 0}
 --- !u!4 &455160997 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7507581300978559005, guid: a51289aed23d0c040a612c71cac80c8f,
@@ -12982,7 +13002,7 @@ MonoBehaviour:
   timeStamp: 0
   currentWave: 0
   infinite: 1
-  enemies: []
+  enemyList: {fileID: 0}
 --- !u!1001 &757986230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16037,9 +16057,9 @@ MonoBehaviour:
   musicSlider: {fileID: 2242521390621786451}
   sfxSlider: {fileID: 641224301165265514}
   allsoundsSlider: {fileID: 8136678360516070003}
-  music: {fileID: 24100000, guid: 967c948287cd1d941bf758a2fc0e0adc, type: 2}
-  sfx: {fileID: 24100000, guid: 346ec5ebe40496b4d866897691e48ac8, type: 2}
-  allsounds: {fileID: 24100000, guid: e1ffef298d196244aa5f8a8a655ac9df, type: 2}
+  music: {fileID: 4338718034041873893, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
+  sfx: {fileID: 6216537257225739402, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
+  allsounds: {fileID: 24100000, guid: be6ef8b158dc0684eb53e772783ed250, type: 2}
 --- !u!4 &943030029
 Transform:
   m_ObjectHideFlags: 0
@@ -16082,6 +16102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 2137409461}
   interactionPanel: {fileID: 2137409461}
+  popupDisable: 0
   targetSceneName: Map
 --- !u!114 &943030032
 MonoBehaviour:
@@ -31633,7 +31654,7 @@ MonoBehaviour:
   timeStamp: 0
   currentWave: 0
   infinite: 1
-  enemies: []
+  enemyList: {fileID: 0}
 --- !u!1001 &2063076672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42288,6 +42309,7 @@ MonoBehaviour:
   barrelRotate: 0
   isShooting: 0
   turret: {fileID: 260013578}
+  sfx: {fileID: 0}
 --- !u!1 &8057162398699669407
 GameObject:
   m_ObjectHideFlags: 0

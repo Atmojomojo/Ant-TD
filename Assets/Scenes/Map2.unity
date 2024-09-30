@@ -3652,6 +3652,7 @@ MonoBehaviour:
   turret: {fileID: 446599994}
   mountedTurret: {fileID: 1315575244}
   shoot: {fileID: 1091071864}
+  popupScript: {fileID: 1327162008}
   inGameUI: {fileID: 942188656}
   mountedTurretShootUI: {fileID: 745573121}
   mountedTurretLeaveUI: {fileID: 1257195573}
@@ -25612,6 +25613,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   popupPanel: {fileID: 1785434031}
   interactionPanel: {fileID: 1785434031}
+  popupDisable: 0
   targetSceneName: Map
 --- !u!114 &1327162009
 MonoBehaviour:

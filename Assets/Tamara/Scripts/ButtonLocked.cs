@@ -13,26 +13,20 @@ public class ButtonLocked : MonoBehaviour
     void Start()
     {
         level2.interactable = false;
+        if (!PlayerPrefs.HasKey("Map1"))
+        {
+            PlayerPrefs.SetInt("Map1", 0);
+        }
         CheckIfScenePlayed();
     }
 
     void CheckIfScenePlayed()
     {
-        if (PlayerPrefs.HasKey(sceneToCheck + "_played"))
+        if (PlayerPrefs.GetInt("Map1") ==1)
         {
-            Debug.Log(sceneToCheck + " has been played.");
-            // Your logic for when the scene has been played
             level2.interactable = true;
         }
-        else
-        {
-            Debug.Log(sceneToCheck + " has not been played.");
-            // Your logic for when the scene has not been played
-            level2.interactable = false;
-        }
-
-        // Save PlayerPrefs
-        PlayerPrefs.Save();
+       
     }
 
 }

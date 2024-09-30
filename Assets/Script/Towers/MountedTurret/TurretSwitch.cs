@@ -14,8 +14,8 @@ public class TurretSwitch : MonoBehaviour
     public Camera main, turret;
     public MountedTurret mountedTurret;
     public MountedTurretShoot shoot;
-    
 
+    public PopupController popupScript;
     public GameObject inGameUI;
     public GameObject mountedTurretShootUI;
     public GameObject mountedTurretLeaveUI;
@@ -30,6 +30,8 @@ public class TurretSwitch : MonoBehaviour
     {
         if (turretActive == false)
         {
+            popupScript.popupDisable = true;
+            popupUI.SetActive(false);
             Cursor.lockState = CursorLockMode.Locked;
             turret.enabled = true;
             main.enabled = false;
@@ -45,12 +47,6 @@ public class TurretSwitch : MonoBehaviour
 
 
             inGameUI.SetActive(true); // Crosshair aan
-
-            if (popupUI != null && popupUI.activeSelf)
-            {
-                HidePopup();
-            }
-
 
         }
         else
@@ -68,10 +64,6 @@ public class TurretSwitch : MonoBehaviour
             inGameUI.SetActive(false);
             mountedTurretLeaveUI.SetActive(false);
 
-            if (popupUI != null && popupUI.activeSelf)
-            {
-                HidePopup();
-            }
 
         }
     }
